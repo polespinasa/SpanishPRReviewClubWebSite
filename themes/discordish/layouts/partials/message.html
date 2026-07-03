@@ -1,19 +1,25 @@
 {{ $msg := . }}
-<article class="message" id="msg-{{ $msg.id }}">
+<article class="message{{ if $msg.continuation }} is-continuation{{ end }}" id="msg-{{ $msg.id }}">
   <div class="message-avatar">
-    {{ $avatar := "" }}
-    {{ with $msg.avatarUrl }}{{ $avatar = partial "safe-remote.html" . }}{{ end }}
-    {{ if $avatar }}
-      <img src="{{ $avatar.RelPermalink }}" alt="" width="40" height="40" loading="lazy">
+    {{ if not $msg.continuation }}
+      {{ $avatar := "" }}
+      {{ with $msg.avatarUrl }}{{ $avatar = partial "safe-remote.html" . }}{{ end }}
+      {{ if $avatar }}
+        <img src="{{ $avatar.RelPermalink }}" alt="" width="38" height="38" loading="lazy">
+      {{ else }}
+        <img src="{{ $msg.avatarUrl }}" alt="" width="38" height="38" loading="lazy">
+      {{ end }}
     {{ else }}
-      <img src="{{ $msg.avatarUrl }}" alt="" width="40" height="40" loading="lazy">
+      <span class="message-time-hover">{{ $msg.timeStr }}</span>
     {{ end }}
   </div>
   <div class="message-body">
-    <div class="message-meta">
-      <span class="message-author" style="color: {{ $msg.authorColor | default "inherit" }}">{{ $msg.author }}</span>
-      <span class="message-time">{{ $msg.timeStr }}</span>
-    </div>
+    {{ if not $msg.continuation }}
+      <div class="message-meta">
+        <span class="message-author" style="color: {{ $msg.authorColor | default "inherit" }}">{{ $msg.author }}</span>
+        <span class="message-time">{{ $msg.timeStr }}</span>
+      </div>
+    {{ end }}
 
     {{ with $msg.replyPreview }}
       {{ partial "reply-preview.html" . }}

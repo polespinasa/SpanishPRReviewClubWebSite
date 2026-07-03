@@ -34,6 +34,10 @@
 
       {{ if ne $role "" }}
         {{ $renderMessages := slice }}
+        {{/* Autor del mensaje anterior renderizado, para agrupar mensajes
+             consecutivos del mismo autor como hace el propio Discord
+             (sin repetir avatar/nombre). */}}
+        {{ $prevAuthorId := "" }}
         {{ range $doc.messages }}
           {{ $msg := . }}
           {{ if or (eq $msg.type "Default") (eq $msg.type "Reply") }}
@@ -83,6 +87,9 @@
                  normalizan a 3 backticks siempre. */}}
             {{ $content := replaceRE "`{4,}" "```" $msg.content }}
 
+            {{ $continuation := and (eq $msg.author.id $prevAuthorId) (eq $replyPreview "") }}
+            {{ $prevAuthorId = $msg.author.id }}
+
             {{ $renderMessages = $renderMessages | append (dict
               "id" $msg.id
               "author" $displayName
@@ -94,6 +101,7 @@
               "reactions" $reactions
               "attachments" $attachments
               "embed" $embed
+              "continuation" $continuation
             ) }}
           {{ end }}
         {{ end }}
