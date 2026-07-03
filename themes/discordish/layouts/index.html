@@ -1,9 +1,46 @@
 {{ define "main" }}
-<h1>Sesiones de PR Review Club</h1>
-<p class="lead">Revisiones de Pull Requests de Bitcoin Core, discutidas en español en Discord.</p>
+{{ $guild := "" }}
+{{ range $prKey, $prFolder := hugo.Data.discord }}
+  {{ range $fileKey, $doc := $prFolder }}
+    {{ if and (not $guild) $doc.guild }}{{ $guild = $doc.guild }}{{ end }}
+  {{ end }}
+{{ end }}
 
+{{ $sessions := .Site.Sections.ByTitle }}
+{{ $questionCount := 0 }}
+{{ range $sessions }}
+  {{ $questionCount = add $questionCount (sub (len .Params.threads) 1) }}
+{{ end }}
+
+<section class="hero">
+  {{ with $guild }}
+    {{ with .iconUrl }}
+      {{ $icon := partial "safe-remote.html" . }}
+      {{ if $icon }}
+        <img class="hero-icon" src="{{ $icon.RelPermalink }}" alt="">
+      {{ else }}
+        <img class="hero-icon" src="{{ . }}" alt="">
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  <h1>PR Review Club en Español</h1>
+  <p class="hero-lead">
+    Un espacio de la comunidad hispanohablante donde revisamos, PR a PR, código real de
+    Bitcoin Core. Cada sesión toma una Pull Request abierta, la trocea en preguntas guiadas
+    y la discute en hilos de Discord — para aprender a leer, entender y revisar C++ de
+    Bitcoin Core juntos. Aquí queda el archivo público de esas sesiones.
+  </p>
+  {{ if gt (len $sessions) 0 }}
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>{{ len $sessions }}</strong><span>PRs revisadas</span></div>
+      <div class="hero-stat"><strong>{{ $questionCount }}</strong><span>preguntas archivadas</span></div>
+    </div>
+  {{ end }}
+</section>
+
+<h2 class="section-heading">Sesiones</h2>
 <ul class="session-list">
-  {{ range .Site.Sections.ByTitle }}
+  {{ range $sessions }}
     <li class="session-card">
       <a href="{{ .RelPermalink }}">
         <span class="session-key">{{ .Title }}</span>

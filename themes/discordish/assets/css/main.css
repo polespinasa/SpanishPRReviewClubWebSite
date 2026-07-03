@@ -147,6 +147,68 @@ h1 {
 
 .pr-title { color: var(--text-muted); margin-top: 0; font-size: 0.95rem; }
 
+/* Landing */
+.hero {
+  text-align: center;
+  padding: 1.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 2rem;
+}
+
+.hero-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 1.9rem;
+  margin: 0 0 0.75rem;
+}
+
+.hero-lead {
+  color: var(--text-muted);
+  max-width: 46rem;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 1.75rem;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-stat strong {
+  font-size: 1.4rem;
+  color: var(--text);
+}
+
+.hero-stat span {
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.section-heading {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.75rem;
+}
+
 /* Home: session cards */
 .session-list {
   list-style: none;
