@@ -1,12 +1,22 @@
 {{ define "main" }}
 {{ $guild := "" }}
+{{ $participantIds := slice }}
 {{ range $prKey, $prFolder := hugo.Data.discord }}
   {{ range $fileKey, $doc := $prFolder }}
     {{ if and (not $guild) $doc.guild }}{{ $guild = $doc.guild }}{{ end }}
+    {{ if eq $doc.channel.type "GuildPublicThread" }}
+      {{ range $doc.messages }}
+        {{ if or (eq .type "Default") (eq .type "Reply") }}
+          {{ if not (in $participantIds .author.id) }}
+            {{ $participantIds = $participantIds | append .author.id }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
-{{ $sessions := .Site.Sections.ByTitle }}
+{{ $sessions := .Site.Sections.ByDate.Reverse }}
 {{ $questionCount := 0 }}
 {{ range $sessions }}
   {{ $questionCount = add $questionCount (sub (len .Params.threads) 1) }}
@@ -32,7 +42,7 @@
   </p>
   {{ if gt (len $sessions) 0 }}
     <div class="hero-stats">
-      <div class="hero-stat"><strong>{{ len $sessions }}</strong><span>PRs revisadas</span></div>
+      <div class="hero-stat"><strong>{{ len $participantIds }}</strong><span>participantes</span></div>
       <div class="hero-stat"><strong>{{ $questionCount }}</strong><span>preguntas archivadas</span></div>
     </div>
   {{ end }}

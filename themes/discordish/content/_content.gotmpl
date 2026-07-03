@@ -38,9 +38,18 @@
              consecutivos del mismo autor como hace el propio Discord
              (sin repetir avatar/nombre). */}}
         {{ $prevAuthorId := "" }}
+        {{/* Timestamp más antiguo del hilo, para poder ordenar las sesiones
+             cronológicamente en la landing en vez de por id de PR. */}}
+        {{ $threadEarliest := "" }}
         {{ range $doc.messages }}
           {{ $msg := . }}
           {{ if or (eq $msg.type "Default") (eq $msg.type "Reply") }}
+            {{ if $msg.timestamp }}
+              {{ if or (eq $threadEarliest "") (lt $msg.timestamp $threadEarliest) }}
+                {{ $threadEarliest = $msg.timestamp }}
+              {{ end }}
+            {{ end }}
+
             {{ $displayName := $msg.author.nickname }}
             {{ if eq $displayName "" }}{{ $displayName = $msg.author.name }}{{ end }}
 
@@ -117,6 +126,7 @@
           "title" $cleanName
           "slug" $slug
           "messages" $renderMessages
+          "earliestTimestamp" $threadEarliest
         ) }}
       {{ end }}
     {{ end }}
@@ -158,7 +168,16 @@
     {{ $navItems = $navItems | append (dict "title" .title "slug" .slug "role" .role "number" .number) }}
   {{ end }}
 
-  {{ $.AddPage (dict
+  {{ $sessionEarliest := "" }}
+  {{ range $threads }}
+    {{ if .earliestTimestamp }}
+      {{ if or (eq $sessionEarliest "") (lt .earliestTimestamp $sessionEarliest) }}
+        {{ $sessionEarliest = .earliestTimestamp }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $sessionPage := dict
     "path" $sessionKey
     "kind" "section"
     "type" "pr-session"
@@ -168,7 +187,11 @@
       "prUrl" $prUrl
       "threads" $navItems
     )
-  ) }}
+  }}
+  {{ if ne $sessionEarliest "" }}
+    {{ $sessionPage = merge $sessionPage (dict "dates" (dict "date" (time.AsTime $sessionEarliest))) }}
+  {{ end }}
+  {{ $.AddPage $sessionPage }}
 
   {{ range $i, $thread := $threads }}
     {{ $prev := "" }}
