@@ -1,17 +1,19 @@
-/* Paleta y tipografía inspiradas en bitcoin.design (bitcoin.design/assets/css/style.css):
-   fondo casi negro, naranja de marca #F7931A, bordes translúcidos finos
-   en vez de bordes sólidos, tipografía Inter. */
+/* Paleta y tipografía inspiradas en bitcoin.design, pero con el naranja
+   dosificado: negro puro + naranja saturado a tope recuerda demasiado a
+   otra marca conocida, así que aquí el naranja queda para el logo y
+   acentos puntuales, no como color de enlace ni relleno grande. */
 :root {
   color-scheme: dark;
-  --bg: #0d0d0f;
-  --bg-raised: #17181b;
-  --text: #ffffff;
+  --bg: #18181c;
+  --bg-raised: #212226;
+  --text: #f2f2f3;
   --text-muted: #9f9f9f;
   --text-faint: #6b6b6f;
   --accent: #f7931a;
-  --accent-ink: #1a1200;
+  --accent-soft: rgba(247, 147, 26, 0.16);
+  --link: #7fb7e8;
   --hairline: rgba(255, 255, 255, 0.08);
-  --hairline-strong: rgba(255, 255, 255, 0.14);
+  --hairline-strong: rgba(255, 255, 255, 0.16);
   --hover: rgba(255, 255, 255, 0.05);
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -30,7 +32,7 @@ body {
   line-height: 1.55;
 }
 
-a { color: var(--accent); text-decoration: none; }
+a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* Header */
@@ -256,7 +258,7 @@ h1 {
   transition: border-color 120ms ease;
 }
 .embed-card:hover { border-color: var(--hairline-strong); }
-.embed-title { font-weight: 600; color: var(--accent); }
+.embed-title { font-weight: 600; color: var(--link); }
 .embed-description { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.35rem; }
 .embed-thumbnail { max-width: 100%; border-radius: var(--radius-sm); margin-top: 0.5rem; display: block; }
 
@@ -360,15 +362,15 @@ h1 {
   color: var(--text) !important;
 }
 
-/* Activo: relleno sólido en el naranja de marca, como los botones
-   primarios de bitcoin.design -- no una franja de color al lado. */
+/* Activo: tinte suave del naranja de marca, no un bloque sólido ni una
+   franja de color al lado. */
 .session-nav-list li.active a {
-  background: var(--accent);
-  color: var(--accent-ink) !important;
+  background: var(--accent-soft);
+  color: var(--accent) !important;
   font-weight: 600;
 }
 .session-nav-list li.active a:hover {
-  color: var(--accent-ink) !important;
+  color: var(--accent) !important;
 }
 
 @media (max-width: 680px) {
