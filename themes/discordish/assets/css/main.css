@@ -1,7 +1,10 @@
 /* Paleta y tipografía inspiradas en bitcoin.design, pero con el naranja
    dosificado: negro puro + naranja saturado a tope recuerda demasiado a
    otra marca conocida, así que aquí el naranja queda para el logo y
-   acentos puntuales, no como color de enlace ni relleno grande. */
+   acentos puntuales, no como color de enlace ni relleno grande.
+
+   Tema oscuro por defecto; el claro se activa por prefers-color-scheme
+   o por el toggle manual (atributo data-theme en <html>, ver theme.js). */
 :root {
   color-scheme: dark;
   --bg: #18181c;
@@ -19,6 +22,38 @@
   --radius-md: 8px;
   --font-sans: "Inter var", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", monospace;
+}
+
+/* Sigue la preferencia del sistema mientras no haya elección manual guardada. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+    --bg: #fbfbfb;
+    --bg-raised: #f0f0f1;
+    --text: #17181a;
+    --text-muted: #6b6b6f;
+    --text-faint: #97979b;
+    --accent-soft: rgba(156, 92, 25, 0.12);
+    --link: #1b6ec2;
+    --hairline: rgba(0, 0, 0, 0.08);
+    --hairline-strong: rgba(0, 0, 0, 0.16);
+    --hover: rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Elección manual del toggle: gana siempre, independientemente del sistema. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #fbfbfb;
+  --bg-raised: #f0f0f1;
+  --text: #17181a;
+  --text-muted: #6b6b6f;
+  --text-faint: #97979b;
+  --accent-soft: rgba(156, 92, 25, 0.12);
+  --link: #1b6ec2;
+  --hairline: rgba(0, 0, 0, 0.08);
+  --hairline-strong: rgba(0, 0, 0, 0.16);
+  --hover: rgba(0, 0, 0, 0.04);
 }
 
 * { box-sizing: border-box; }
@@ -39,6 +74,10 @@ a:hover { text-decoration: underline; }
 .site-header {
   padding: 0.9rem 1.5rem;
   border-bottom: 1px solid var(--hairline);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .site-title {
@@ -46,6 +85,29 @@ a:hover { text-decoration: underline; }
   font-size: 1.05rem;
   color: var(--text) !important;
   text-decoration: none !important;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hairline);
+  background: var(--bg-raised);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--hairline-strong); }
+.theme-toggle svg { width: 16px; height: 16px; }
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) .theme-toggle .icon-sun { display: none; }
+  :root:not([data-theme]) .theme-toggle .icon-moon { display: block; }
 }
 
 .site-main {
