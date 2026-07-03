@@ -2,7 +2,7 @@
 <article class="message" id="msg-{{ $msg.id }}">
   <div class="message-avatar">
     {{ $avatar := "" }}
-    {{ with $msg.avatarUrl }}{{ $avatar = resources.GetRemote . }}{{ end }}
+    {{ with $msg.avatarUrl }}{{ $avatar = partial "safe-remote.html" . }}{{ end }}
     {{ if $avatar }}
       <img src="{{ $avatar.RelPermalink }}" alt="" width="40" height="40" loading="lazy">
     {{ else }}
@@ -24,7 +24,7 @@
     {{ if $msg.attachments }}
       <div class="message-attachments">
         {{ range $msg.attachments }}
-          {{ $file := resources.GetRemote .url }}
+          {{ $file := partial "safe-remote.html" .url }}
           {{ if $file }}
             <img class="message-attachment" src="{{ $file.RelPermalink }}" alt="{{ .fileName }}" loading="lazy">
           {{ else }}

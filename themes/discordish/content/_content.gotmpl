@@ -17,7 +17,11 @@
       {{ $order := 0 }}
       {{ $number := 0 }}
 
-      {{ if eq $cleanName "Introducción" }}
+      {{/* El nombre del hilo de intro varía entre sesiones exportadas
+           ("Intro", "Introduccion", "Introducción"...), así que se
+           detecta por prefijo insensible a mayúsculas/acentos en vez
+           de una igualdad exacta. */}}
+      {{ if strings.HasPrefix (strings.ToLower $cleanName) "intro" }}
         {{ $role = "intro" }}
       {{ else }}
         {{ $m := findRESubmatch `Pregunta\s*(\d+)` $cleanName 1 }}
