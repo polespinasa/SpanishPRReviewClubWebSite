@@ -1,0 +1,14 @@
+baseURL = "https://polespinasa.github.io/SpanishPRReviewClubWebSite/"
+locale = "es-ES"
+defaultContentLanguage = "es"
+title = "Bitcoin Core PR Review Club en Español"
+theme = "discordish"
+
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[security.http]
+  urls = ['^https://cdn\.discordapp\.com/', '^https://images-ext-\d+\.discordapp\.net/', '^https://media\.discordapp\.net/']
+
+[markup.goldmark.renderer]
+  hardWraps = true
+  unsafe = false

@@ -1,0 +1,4 @@
+name = "discordish"
+license = "MIT"
+description = "Tema Hugo que renderiza sesiones de PR review club exportadas de Discord (DiscordChatExporter) como páginas de chat navegables."
+min_version = "0.126.0"

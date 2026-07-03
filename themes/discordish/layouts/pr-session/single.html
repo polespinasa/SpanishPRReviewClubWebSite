@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ $session := .Site.GetPage (printf "/%s" .Params.sessionKey) }}
+<nav class="breadcrumb">
+  <a href="{{ "/" | relLangURL }}">← Todas las sesiones</a>
+  {{ if $session }} · <a href="{{ $session.RelPermalink }}">{{ $session.Title }}</a>{{ end }}
+</nav>
+
+<h1>{{ if eq .Params.role "intro" }}Introducción{{ else }}Pregunta {{ .Params.number }}{{ end }}</h1>
+{{ with .Params.prTitle }}<p class="pr-title">{{ . }}</p>{{ end }}
+
+<div class="chat-log">
+  {{ range .Params.messages }}
+    {{ partial "message.html" . }}
+  {{ end }}
+</div>
+
+{{ partial "prevnext.html" . }}
+{{ end }}

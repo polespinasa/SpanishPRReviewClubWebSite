@@ -1,0 +1,18 @@
+{{ define "main" }}
+<h1>Sesiones de PR Review Club</h1>
+<p class="lead">Revisiones de Pull Requests de Bitcoin Core, discutidas en español en Discord.</p>
+
+<ul class="session-list">
+  {{ range .Site.Sections.ByTitle }}
+    <li class="session-card">
+      <a href="{{ .RelPermalink }}">
+        <span class="session-key">{{ .Title }}</span>
+        {{ with .Params.prTitle }}<span class="session-pr-title">{{ . }}</span>{{ end }}
+      </a>
+      {{ with .Params.prUrl }}<a class="session-pr-link" href="{{ . }}" target="_blank" rel="noopener">Ver PR en GitHub ↗</a>{{ end }}
+    </li>
+  {{ else }}
+    <li>Todavía no hay sesiones. Añade exportaciones de Discord en <code>data/discord/</code>.</li>
+  {{ end }}
+</ul>
+{{ end }}

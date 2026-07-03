@@ -1,0 +1,8 @@
+<div class="reactions">
+  {{ range . }}
+    <span class="reaction-pill">
+      <img src="{{ .emojiImageUrl }}" alt="{{ .emojiName }}" width="16" height="16" loading="lazy">
+      <span class="reaction-count">{{ .count }}</span>
+    </span>
+  {{ end }}
+</div>

@@ -1,0 +1,45 @@
+{{ $msg := . }}
+<article class="message" id="msg-{{ $msg.id }}">
+  <div class="message-avatar">
+    {{ $avatar := "" }}
+    {{ with $msg.avatarUrl }}{{ $avatar = resources.GetRemote . }}{{ end }}
+    {{ if $avatar }}
+      <img src="{{ $avatar.RelPermalink }}" alt="" width="40" height="40" loading="lazy">
+    {{ else }}
+      <img src="{{ $msg.avatarUrl }}" alt="" width="40" height="40" loading="lazy">
+    {{ end }}
+  </div>
+  <div class="message-body">
+    <div class="message-meta">
+      <span class="message-author" style="color: {{ $msg.authorColor | default "inherit" }}">{{ $msg.author }}</span>
+      <span class="message-time">{{ $msg.timeStr }}</span>
+    </div>
+
+    {{ with $msg.replyPreview }}
+      {{ partial "reply-preview.html" . }}
+    {{ end }}
+
+    <div class="message-content">{{ markdownify $msg.content }}</div>
+
+    {{ if $msg.attachments }}
+      <div class="message-attachments">
+        {{ range $msg.attachments }}
+          {{ $file := resources.GetRemote .url }}
+          {{ if $file }}
+            <img class="message-attachment" src="{{ $file.RelPermalink }}" alt="{{ .fileName }}" loading="lazy">
+          {{ else }}
+            <a class="message-attachment-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .fileName }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ with $msg.embed }}
+      {{ partial "embed-card.html" . }}
+    {{ end }}
+
+    {{ if $msg.reactions }}
+      {{ partial "reactions.html" $msg.reactions }}
+    {{ end }}
+  </div>
+</article>
