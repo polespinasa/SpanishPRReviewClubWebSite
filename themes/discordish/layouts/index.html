@@ -17,10 +17,6 @@
 {{ end }}
 
 {{ $sessions := .Site.Sections.ByDate.Reverse }}
-{{ $questionCount := 0 }}
-{{ range $sessions }}
-  {{ $questionCount = add $questionCount (sub (len .Params.threads) 1) }}
-{{ end }}
 
 <section class="hero">
   {{ with $guild }}
@@ -42,8 +38,8 @@
   </p>
   {{ if gt (len $sessions) 0 }}
     <div class="hero-stats">
+      <div class="hero-stat"><strong>{{ len $sessions }}</strong><span>PRs revisadas</span></div>
       <div class="hero-stat"><strong>{{ len $participantIds }}</strong><span>participantes</span></div>
-      <div class="hero-stat"><strong>{{ $questionCount }}</strong><span>preguntas archivadas</span></div>
     </div>
   {{ end }}
 </section>
