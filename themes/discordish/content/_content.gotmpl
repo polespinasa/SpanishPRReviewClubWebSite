@@ -72,13 +72,20 @@
               {{ $embed = dict "title" $e.title "url" $e.url "description" $desc "thumbnailUrl" $thumb }}
             {{ end }}
 
+            {{/* Discord tolera vallas de código con un número de backticks
+                 desigual entre apertura y cierre (p.ej. abrir con ```` y
+                 cerrar con ```); CommonMark/goldmark no, y eso deja el resto
+                 del mensaje "atrapado" dentro del bloque de código. Se
+                 normalizan a 3 backticks siempre. */}}
+            {{ $content := replaceRE "`{4,}" "```" $msg.content }}
+
             {{ $renderMessages = $renderMessages | append (dict
               "id" $msg.id
               "author" $displayName
               "avatarUrl" $msg.author.avatarUrl
               "authorColor" $msg.author.color
               "timeStr" $timeStr
-              "content" $msg.content
+              "content" $content
               "replyPreview" $replyPreview
               "reactions" $reactions
               "attachments" $attachments
