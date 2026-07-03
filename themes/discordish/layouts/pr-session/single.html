@@ -1,18 +1,31 @@
 {{ define "main" }}
 {{ $session := .Site.GetPage (printf "/%s" .Params.sessionKey) }}
+{{ $activeSlug := "introduccion" }}
+{{ if eq .Params.role "pregunta" }}{{ $activeSlug = printf "pregunta-%d" .Params.number }}{{ end }}
+
 <nav class="breadcrumb">
   <a href="{{ .Site.Home.RelPermalink }}">← Todas las sesiones</a>
   {{ if $session }} · <a href="{{ $session.RelPermalink }}">{{ $session.Title }}</a>{{ end }}
 </nav>
 
-<h1>{{ if eq .Params.role "intro" }}Introducción{{ else }}Pregunta {{ .Params.number }}{{ end }}</h1>
-{{ with .Params.prTitle }}<p class="pr-title">{{ . }}</p>{{ end }}
-
-<div class="chat-log">
-  {{ range .Params.messages }}
-    {{ partial "message.html" . }}
+<div class="session-layout">
+  {{ if $session }}
+    <aside class="session-sidebar">
+      {{ partial "session-nav.html" (dict "session" $session "activeSlug" $activeSlug) }}
+    </aside>
   {{ end }}
-</div>
 
-{{ partial "prevnext.html" . }}
+  <div class="session-content">
+    <h1>{{ if eq .Params.role "intro" }}Introducción{{ else }}Pregunta {{ .Params.number }}{{ end }}</h1>
+    {{ with .Params.prTitle }}<p class="pr-title">{{ . }}</p>{{ end }}
+
+    <div class="chat-log">
+      {{ range .Params.messages }}
+        {{ partial "message.html" . }}
+      {{ end }}
+    </div>
+
+    {{ partial "prevnext.html" . }}
+  </div>
+</div>
 {{ end }}
