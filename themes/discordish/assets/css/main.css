@@ -1,20 +1,22 @@
+/* Paleta y tipografía inspiradas en bitcoin.design (bitcoin.design/assets/css/style.css):
+   fondo casi negro, naranja de marca #F7931A, bordes translúcidos finos
+   en vez de bordes sólidos, tipografía Inter. */
 :root {
   color-scheme: dark;
-  --bg: #313338;
-  --bg-secondary: #2b2d31;
-  --bg-tertiary: #1e1f22;
-  --bg-hover: rgba(79, 84, 92, 0.16);
-  --bg-selected: rgba(79, 84, 92, 0.32);
-  --text: #dbdee1;
-  --text-muted: #949ba4;
-  --text-faint: #6d6f78;
+  --bg: #0d0d0f;
+  --bg-raised: #17181b;
+  --text: #ffffff;
+  --text-muted: #9f9f9f;
+  --text-faint: #6b6b6f;
   --accent: #f7931a;
-  --link: #00a8fc;
-  --border: #3f4147;
+  --accent-ink: #1a1200;
+  --hairline: rgba(255, 255, 255, 0.08);
+  --hairline-strong: rgba(255, 255, 255, 0.14);
+  --hover: rgba(255, 255, 255, 0.05);
   --radius-sm: 4px;
   --radius-md: 8px;
-  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+  --font-sans: "Inter var", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", monospace;
 }
 
 * { box-sizing: border-box; }
@@ -25,17 +27,16 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   font-size: 15.5px;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-a { color: var(--link); text-decoration: none; }
+a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* Header */
 .site-header {
-  background: var(--bg-tertiary);
-  padding: 0.75rem 1.5rem;
-  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 1.5rem;
+  border-bottom: 1px solid var(--hairline);
 }
 
 .site-title {
@@ -48,7 +49,7 @@ a:hover { text-decoration: underline; }
 .site-main {
   max-width: 760px;
   margin: 0 auto;
-  padding: 2rem 1.25rem 4rem;
+  padding: 2.25rem 1.25rem 4rem;
 }
 
 .site-main:has(.session-layout) {
@@ -69,11 +70,12 @@ a:hover { text-decoration: underline; }
 }
 
 .breadcrumb a { color: var(--text-muted); }
-.breadcrumb a:hover { color: var(--link); }
+.breadcrumb a:hover { color: var(--accent); }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
   margin: 0.2rem 0 0.3rem;
 }
 
@@ -90,21 +92,22 @@ h1 {
 }
 
 .session-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
   padding: 1rem 1.2rem;
+  transition: border-color 120ms ease;
 }
 
 .session-card:hover {
-  border-color: #55585e;
+  border-color: var(--hairline-strong);
 }
 
 .session-key {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.72rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-faint);
   margin-bottom: 0.3rem;
@@ -124,7 +127,7 @@ h1 {
   font-size: 0.83rem;
   color: var(--text-muted) !important;
 }
-.session-pr-link:hover { color: var(--link) !important; }
+.session-pr-link:hover { color: var(--accent) !important; }
 
 /* Session index thread list */
 .thread-list {
@@ -139,13 +142,15 @@ h1 {
   display: block;
   padding: 0.55rem 0.85rem;
   border-radius: var(--radius-sm);
-  background: var(--bg-secondary);
+  background: var(--bg-raised);
+  border: 1px solid var(--hairline);
   color: var(--text) !important;
   text-decoration: none !important;
+  transition: border-color 120ms ease;
 }
 
 .thread-list a:hover {
-  background: var(--bg-hover);
+  border-color: var(--hairline-strong);
 }
 
 /* Chat log */
@@ -159,7 +164,7 @@ h1 {
   padding: 0.45rem 0.5rem;
   border-radius: var(--radius-sm);
 }
-.message:hover { background: rgba(4, 4, 5, 0.16); }
+.message:hover { background: var(--hover); }
 
 .message.is-continuation {
   padding-top: 0.05rem;
@@ -200,8 +205,8 @@ h1 {
 .message-content { white-space: pre-wrap; word-wrap: break-word; }
 .message-content p { margin: 0.2rem 0; }
 .message-content pre {
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius-sm);
   padding: 0.7rem 0.9rem;
   overflow-x: auto;
@@ -209,7 +214,7 @@ h1 {
 }
 .message-content code {
   font-family: var(--font-mono);
-  background: var(--bg-tertiary);
+  background: var(--bg-raised);
   border-radius: 3px;
   padding: 0.1rem 0.35rem;
   font-size: 0.87em;
@@ -221,7 +226,7 @@ h1 {
   gap: 0.4rem;
   font-size: 0.79rem;
   color: var(--text-muted) !important;
-  border-left: 2px solid var(--border);
+  border-left: 2px solid var(--hairline-strong);
   padding-left: 0.6rem;
   margin-bottom: 0.25rem;
   text-decoration: none !important;
@@ -234,21 +239,24 @@ h1 {
   max-width: 100%;
   max-height: 320px;
   border-radius: var(--radius-md);
+  border: 1px solid var(--hairline);
   display: block;
 }
 
 .embed-card {
   display: block;
-  border-left: 3px solid var(--border);
-  background: var(--bg-secondary);
-  border-radius: var(--radius-sm);
+  background: var(--bg-raised);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
   padding: 0.7rem 0.9rem;
   margin-top: 0.5rem;
   max-width: 440px;
   color: var(--text) !important;
   text-decoration: none !important;
+  transition: border-color 120ms ease;
 }
-.embed-title { font-weight: 600; color: var(--link); }
+.embed-card:hover { border-color: var(--hairline-strong); }
+.embed-title { font-weight: 600; color: var(--accent); }
 .embed-description { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.35rem; }
 .embed-thumbnail { max-width: 100%; border-radius: var(--radius-sm); margin-top: 0.5rem; display: block; }
 
@@ -257,13 +265,14 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.32rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius-sm);
   padding: 0.12rem 0.5rem;
   font-size: 0.78rem;
+  transition: border-color 120ms ease;
 }
-.reaction-pill:hover { border-color: var(--text-muted); }
+.reaction-pill:hover { border-color: var(--hairline-strong); }
 
 .prevnext {
   display: flex;
@@ -276,15 +285,17 @@ h1 {
   flex: 1;
   padding: 0.65rem 1rem;
   border-radius: var(--radius-sm);
-  background: var(--bg-secondary);
+  background: var(--bg-raised);
+  border: 1px solid var(--hairline);
   color: var(--text) !important;
   text-decoration: none !important;
   font-size: 0.88rem;
+  transition: border-color 120ms ease;
 }
-.prevnext a:hover { background: var(--bg-hover); }
+.prevnext a:hover { border-color: var(--hairline-strong); }
 .prevnext-next { text-align: right; }
 
-/* Session layout: compact left sidebar + content, like a Discord channel list */
+/* Sesión: barra lateral compacta con el índice de hilos */
 .session-layout {
   display: flex;
   align-items: flex-start;
@@ -303,16 +314,17 @@ h1 {
 }
 
 .session-nav {
-  background: var(--bg-secondary);
+  background: var(--bg-raised);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
   padding: 0.75rem 0.6rem;
   font-size: 0.86rem;
 }
 
 .session-nav-title {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.72rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-faint);
   margin-bottom: 0.4rem;
@@ -326,7 +338,7 @@ h1 {
   font-size: 0.78rem;
   color: var(--text-muted) !important;
 }
-.session-nav-pr:hover { color: var(--link) !important; }
+.session-nav-pr:hover { color: var(--accent) !important; }
 
 .session-nav-list {
   list-style: none;
@@ -345,14 +357,18 @@ h1 {
 }
 
 .session-nav-list a:hover {
-  background: var(--bg-hover);
   color: var(--text) !important;
 }
 
+/* Activo: relleno sólido en el naranja de marca, como los botones
+   primarios de bitcoin.design -- no una franja de color al lado. */
 .session-nav-list li.active a {
-  background: var(--bg-selected);
-  color: var(--text) !important;
+  background: var(--accent);
+  color: var(--accent-ink) !important;
   font-weight: 600;
+}
+.session-nav-list li.active a:hover {
+  color: var(--accent-ink) !important;
 }
 
 @media (max-width: 680px) {
