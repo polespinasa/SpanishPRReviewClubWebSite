@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $session := .Site.GetPage (printf "/%s" .Params.sessionKey) }}
 <nav class="breadcrumb">
-  <a href="{{ "/" | relLangURL }}">← Todas las sesiones</a>
+  <a href="{{ .Site.Home.RelPermalink }}">← Todas las sesiones</a>
   {{ if $session }} · <a href="{{ $session.RelPermalink }}">{{ $session.Title }}</a>{{ end }}
 </nav>
 

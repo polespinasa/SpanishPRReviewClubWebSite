@@ -1,5 +1,5 @@
 {{ define "main" }}
-<nav class="breadcrumb"><a href="{{ "/" | relLangURL }}">← Todas las sesiones</a></nav>
+<nav class="breadcrumb"><a href="{{ .Site.Home.RelPermalink }}">← Todas las sesiones</a></nav>
 
 <h1>{{ .Title }}</h1>
 {{ with .Params.prTitle }}<p class="pr-title">{{ . }}</p>{{ end }}

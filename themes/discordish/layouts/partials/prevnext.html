@@ -1,8 +1,12 @@
 <nav class="prevnext">
   {{ with .Params.prev }}
-    <a class="prevnext-prev" href="{{ printf "/%s/" . | relLangURL }}">← Anterior</a>
+    {{ with $.Site.GetPage (printf "/%s" .) }}
+      <a class="prevnext-prev" href="{{ .RelPermalink }}">← Anterior</a>
+    {{ end }}
   {{ end }}
   {{ with .Params.next }}
-    <a class="prevnext-next" href="{{ printf "/%s/" . | relLangURL }}">Siguiente →</a>
+    {{ with $.Site.GetPage (printf "/%s" .) }}
+      <a class="prevnext-next" href="{{ .RelPermalink }}">Siguiente →</a>
+    {{ end }}
   {{ end }}
 </nav>
