@@ -31,7 +31,7 @@
   {{ end }}
   <h1>PR Review Club en Español</h1>
   <div class="hero-lead">
-    <p>Contribuir a Bitcoin Core puede parecer complicado al principio. El PR Review Club en Español nlo hacemos más accesible a la comunidad hispanohablante.</p>
+    <p>Contribuir a Bitcoin Core puede parecer complicado al principio. El PR Review Club en Español lo hacemos más accesible a la comunidad hispanohablante.</p>
     <p>En cada sesión elegimos una Pull Request abierta, la dividimos en preguntas guiadas y la revisamos juntos: analizamos el código, resolvemos dudas y aprendemos cómo piensan quienes mantienen y contribuyen a Bitcoin Core.</p>
     <p>Esta web es un archivo público de todas las sesiones pasadas, para que puedas consultarlas cuando quieras.</p>
     <p class="hero-cta">Si quieres participar en vivo, únete a nuestro <a href="https://discord.gg/XNK2hBw9vm" target="_blank" rel="noopener">Discord</a>, hay una sesión al final de cada mes.</p>
@@ -49,7 +49,7 @@
   {{ range $sessions }}
     <li class="session-card">
       <a href="{{ .RelPermalink }}">
-        <span class="session-key">{{ .Title }}</span>
+        <span class="session-key">{{ .Title }}{{ if not .Date.IsZero }} · {{ .Date.Format "02/01/2006" }}{{ end }}</span>
         {{ with .Params.prTitle }}<span class="session-pr-title">{{ . }}</span>{{ end }}
       </a>
       {{ with .Params.prUrl }}<a class="session-pr-link" href="{{ . }}" target="_blank" rel="noopener">Ver PR en GitHub ↗</a>{{ end }}
