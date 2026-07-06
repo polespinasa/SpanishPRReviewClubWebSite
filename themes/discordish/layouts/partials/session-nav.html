@@ -1,0 +1,18 @@
+{{ $session := .session }}
+{{ $activeSlug := .activeSlug }}
+{{ $base := strings.TrimSuffix "/" $session.RelPermalink }}
+<nav class="session-nav">
+  <div class="session-nav-title">{{ $session.Title }}</div>
+  {{ with $session.Params.prUrl }}
+    <a class="session-nav-pr" href="{{ . }}" target="_blank" rel="noopener">Ver PR en GitHub ↗</a>
+  {{ end }}
+  <ol class="session-nav-list">
+    {{ range $session.Params.threads }}
+      <li{{ if eq .slug $activeSlug }} class="active"{{ end }}>
+        <a href="{{ printf "%s/%s/" $base .slug }}">
+          {{ if eq .role "intro" }}Introducción{{ else }}Pregunta {{ .number }}{{ end }}
+        </a>
+      </li>
+    {{ end }}
+  </ol>
+</nav>

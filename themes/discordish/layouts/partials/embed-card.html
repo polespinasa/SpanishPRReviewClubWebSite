@@ -1,0 +1,15 @@
+{{ $embed := . }}
+<a class="embed-card" href="{{ $embed.url }}" target="_blank" rel="noopener">
+  {{ with $embed.thumbnailUrl }}
+    {{ $thumb := partial "safe-remote.html" . }}
+    {{ if $thumb }}
+      <img class="embed-thumbnail" src="{{ $thumb.RelPermalink }}" alt="" loading="lazy">
+    {{ else }}
+      <img class="embed-thumbnail" src="{{ . }}" alt="" loading="lazy">
+    {{ end }}
+  {{ end }}
+  <div class="embed-body">
+    <div class="embed-title">{{ $embed.title }}</div>
+    {{ with $embed.description }}<div class="embed-description">{{ . }}</div>{{ end }}
+  </div>
+</a>

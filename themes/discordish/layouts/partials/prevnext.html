@@ -1,0 +1,12 @@
+<nav class="prevnext">
+  {{ with .Params.prev }}
+    {{ with $.Site.GetPage (printf "/%s" .) }}
+      <a class="prevnext-prev" href="{{ .RelPermalink }}">← Anterior</a>
+    {{ end }}
+  {{ end }}
+  {{ with .Params.next }}
+    {{ with $.Site.GetPage (printf "/%s" .) }}
+      <a class="prevnext-next" href="{{ .RelPermalink }}">Siguiente →</a>
+    {{ end }}
+  {{ end }}
+</nav>

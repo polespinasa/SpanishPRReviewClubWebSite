@@ -1,0 +1,51 @@
+{{ $msg := . }}
+<article class="message{{ if $msg.continuation }} is-continuation{{ end }}" id="msg-{{ $msg.id }}">
+  <div class="message-avatar">
+    {{ if not $msg.continuation }}
+      {{ $avatar := "" }}
+      {{ with $msg.avatarUrl }}{{ $avatar = partial "safe-remote.html" . }}{{ end }}
+      {{ if $avatar }}
+        <img src="{{ $avatar.RelPermalink }}" alt="" width="38" height="38" loading="lazy">
+      {{ else }}
+        <img src="{{ $msg.avatarUrl }}" alt="" width="38" height="38" loading="lazy">
+      {{ end }}
+    {{ else }}
+      <span class="message-time-hover">{{ $msg.timeStr }}</span>
+    {{ end }}
+  </div>
+  <div class="message-body">
+    {{ if not $msg.continuation }}
+      <div class="message-meta">
+        <span class="message-author" style="color: {{ $msg.authorColor | default "inherit" }}">{{ $msg.author }}</span>
+        <span class="message-time">{{ $msg.timeStr }}</span>
+      </div>
+    {{ end }}
+
+    {{ with $msg.replyPreview }}
+      {{ partial "reply-preview.html" . }}
+    {{ end }}
+
+    <div class="message-content">{{ markdownify $msg.content }}</div>
+
+    {{ if $msg.attachments }}
+      <div class="message-attachments">
+        {{ range $msg.attachments }}
+          {{ $file := partial "safe-remote.html" .url }}
+          {{ if $file }}
+            <img class="message-attachment" src="{{ $file.RelPermalink }}" alt="{{ .fileName }}" loading="lazy">
+          {{ else }}
+            <a class="message-attachment-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .fileName }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ with $msg.embed }}
+      {{ partial "embed-card.html" . }}
+    {{ end }}
+
+    {{ if $msg.reactions }}
+      {{ partial "reactions.html" $msg.reactions }}
+    {{ end }}
+  </div>
+</article>

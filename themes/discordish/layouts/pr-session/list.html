@@ -1,0 +1,18 @@
+{{ define "main" }}
+<nav class="breadcrumb"><a href="{{ .Site.Home.RelPermalink }}">← Todas las sesiones</a></nav>
+
+<h1>{{ .Title }}</h1>
+{{ with .Params.prTitle }}<p class="pr-title">{{ . }}</p>{{ end }}
+{{ with .Params.prUrl }}<p><a href="{{ . }}" target="_blank" rel="noopener">Ver Pull Request en GitHub ↗</a></p>{{ end }}
+
+{{ $base := strings.TrimSuffix "/" .RelPermalink }}
+<ol class="thread-list">
+  {{ range .Params.threads }}
+    <li>
+      <a href="{{ printf "%s/%s/" $base .slug }}">
+        {{ if eq .role "intro" }}Introducción{{ else }}Pregunta {{ .number }}{{ end }}
+      </a>
+    </li>
+  {{ end }}
+</ol>
+{{ end }}

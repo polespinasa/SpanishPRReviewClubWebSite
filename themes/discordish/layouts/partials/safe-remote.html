@@ -1,0 +1,14 @@
+{{/* Descarga una URL remota para autoalojarla, devolviendo nil (en vez de
+     abortar el build) si la petición falla -- p.ej. un link firmado de
+     Discord CDN ya caducado. El llamante debe usar la URL cruda como
+     fallback cuando esto devuelve nil. */}}
+{{ $url := . }}
+{{ $result := "" }}
+{{ with try (resources.GetRemote $url) }}
+  {{ with .Err }}
+    {{ warnf "No se pudo descargar %q: %s" $url . }}
+  {{ else with .Value }}
+    {{ $result = . }}
+  {{ end }}
+{{ end }}
+{{ return $result }}

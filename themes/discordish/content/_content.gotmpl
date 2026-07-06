@@ -1,0 +1,219 @@
+{{/*
+  Content adapter: genera las páginas de sesiones de PR review club a partir
+  de los JSON exportados con DiscordChatExporter, colocados en data/discord/**.
+
+  Agrupa por channel.category (no por carpeta ni nombre de fichero), así que
+  basta con soltar nuevos JSON exportados bajo data/discord/ para que se
+  generen páginas nuevas automáticamente.
+*/}}
+
+{{ $allThreads := slice }}
+
+{{ range $prKey, $prFolder := hugo.Data.discord }}
+  {{ range $fileKey, $doc := $prFolder }}
+    {{ if eq $doc.channel.type "GuildPublicThread" }}
+      {{ $cleanName := strings.TrimSpace (strings.Replace $doc.channel.name "*" "") }}
+      {{ $role := "" }}
+      {{ $order := 0 }}
+      {{ $number := 0 }}
+
+      {{/* El nombre del hilo de intro varía entre sesiones exportadas
+           ("Intro", "Introduccion", "Introducción"...), así que se
+           detecta por prefijo insensible a mayúsculas/acentos en vez
+           de una igualdad exacta. */}}
+      {{ if strings.HasPrefix (strings.ToLower $cleanName) "intro" }}
+        {{ $role = "intro" }}
+      {{ else }}
+        {{ $m := findRESubmatch `Pregunta\s*(\d+)` $cleanName 1 }}
+        {{ if gt (len $m) 0 }}
+          {{ $number = int (index (index $m 0) 1) }}
+          {{ $role = "pregunta" }}
+          {{ $order = $number }}
+        {{ end }}
+      {{ end }}
+
+      {{ if ne $role "" }}
+        {{ $renderMessages := slice }}
+        {{/* Autor del mensaje anterior renderizado, para agrupar mensajes
+             consecutivos del mismo autor como hace el propio Discord
+             (sin repetir avatar/nombre). */}}
+        {{ $prevAuthorId := "" }}
+        {{/* Timestamp más antiguo del hilo, para poder ordenar las sesiones
+             cronológicamente en la landing en vez de por id de PR. */}}
+        {{ $threadEarliest := "" }}
+        {{ range $doc.messages }}
+          {{ $msg := . }}
+          {{ if or (eq $msg.type "Default") (eq $msg.type "Reply") }}
+            {{ if $msg.timestamp }}
+              {{ if or (eq $threadEarliest "") (lt $msg.timestamp $threadEarliest) }}
+                {{ $threadEarliest = $msg.timestamp }}
+              {{ end }}
+            {{ end }}
+
+            {{ $displayName := $msg.author.nickname }}
+            {{ if eq $displayName "" }}{{ $displayName = $msg.author.name }}{{ end }}
+
+            {{ $timeStr := "" }}
+            {{ with $msg.timestamp }}{{ $timeStr = time.Format "02/01/2006 15:04" . }}{{ end }}
+
+            {{ $replyPreview := "" }}
+            {{ if eq $msg.type "Reply" }}
+              {{ if $msg.reference }}
+                {{ $matches := where $doc.messages "id" $msg.reference.messageId }}
+                {{ if gt (len $matches) 0 }}
+                  {{ $orig := index $matches 0 }}
+                  {{ $origAuthor := $orig.author.nickname }}
+                  {{ if eq $origAuthor "" }}{{ $origAuthor = $orig.author.name }}{{ end }}
+                  {{ $replyPreview = dict "author" $origAuthor "snippet" (strings.Truncate 80 $orig.content) "id" $orig.id }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+
+            {{ $reactions := slice }}
+            {{ range $msg.reactions }}
+              {{ $reactions = $reactions | append (dict "emojiImageUrl" .emoji.imageUrl "emojiName" .emoji.name "count" .count) }}
+            {{ end }}
+
+            {{ $attachments := slice }}
+            {{ range $msg.attachments }}
+              {{ $attachments = $attachments | append (dict "url" .url "fileName" .fileName) }}
+            {{ end }}
+
+            {{ $embed := "" }}
+            {{ if gt (len $msg.embeds) 0 }}
+              {{ $e := index $msg.embeds 0 }}
+              {{ $desc := "" }}
+              {{ with $e.description }}{{ $desc = htmlUnescape (htmlUnescape .) }}{{ end }}
+              {{ $thumb := "" }}
+              {{ with $e.thumbnail }}{{ $thumb = .url }}{{ end }}
+              {{ $embed = dict "title" $e.title "url" $e.url "description" $desc "thumbnailUrl" $thumb }}
+            {{ end }}
+
+            {{/* Discord tolera vallas de código con un número de backticks
+                 desigual entre apertura y cierre (p.ej. abrir con ```` y
+                 cerrar con ```); CommonMark/goldmark no, y eso deja el resto
+                 del mensaje "atrapado" dentro del bloque de código. Se
+                 normalizan a 3 backticks siempre. */}}
+            {{ $content := replaceRE "`{4,}" "```" $msg.content }}
+
+            {{ $continuation := and (eq $msg.author.id $prevAuthorId) (eq $replyPreview "") }}
+            {{ $prevAuthorId = $msg.author.id }}
+
+            {{ $renderMessages = $renderMessages | append (dict
+              "id" $msg.id
+              "author" $displayName
+              "avatarUrl" $msg.author.avatarUrl
+              "authorColor" $msg.author.color
+              "timeStr" $timeStr
+              "content" $content
+              "replyPreview" $replyPreview
+              "reactions" $reactions
+              "attachments" $attachments
+              "embed" $embed
+              "continuation" $continuation
+            ) }}
+          {{ end }}
+        {{ end }}
+
+        {{ $slug := "introduccion" }}
+        {{ if eq $role "pregunta" }}{{ $slug = printf "pregunta-%d" $number }}{{ end }}
+
+        {{ $allThreads = $allThreads | append (dict
+          "sessionKey" $doc.channel.category
+          "role" $role
+          "order" $order
+          "number" $number
+          "title" $cleanName
+          "slug" $slug
+          "messages" $renderMessages
+          "earliestTimestamp" $threadEarliest
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Descubrir las claves de sesión (p.ej. "pr-34861") sin depender de nombres de carpeta */}}
+{{ $sessionKeys := slice }}
+{{ range $allThreads }}
+  {{ if not (in $sessionKeys .sessionKey) }}
+    {{ $sessionKeys = $sessionKeys | append .sessionKey }}
+  {{ end }}
+{{ end }}
+
+{{ range $sessionKeys }}
+  {{ $sessionKey := . }}
+  {{ $threads := sort (where $allThreads "sessionKey" $sessionKey) "order" }}
+
+  {{ $prTitle := $sessionKey }}
+  {{ $prUrl := "" }}
+  {{ range $threads }}
+    {{ if eq .role "intro" }}
+      {{ range .messages }}
+        {{ if .embed }}
+          {{ $prTitle = .embed.title }}
+          {{ $prUrl = .embed.url }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $paths := slice }}
+  {{ range $threads }}
+    {{ $paths = $paths | append (printf "%s/%s" $sessionKey .slug) }}
+  {{ end }}
+
+  {{ $navItems := slice }}
+  {{ range $threads }}
+    {{ $navItems = $navItems | append (dict "title" .title "slug" .slug "role" .role "number" .number) }}
+  {{ end }}
+
+  {{ $sessionEarliest := "" }}
+  {{ range $threads }}
+    {{ if .earliestTimestamp }}
+      {{ if or (eq $sessionEarliest "") (lt .earliestTimestamp $sessionEarliest) }}
+        {{ $sessionEarliest = .earliestTimestamp }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $sessionPage := dict
+    "path" $sessionKey
+    "kind" "section"
+    "type" "pr-session"
+    "title" $sessionKey
+    "params" (dict
+      "prTitle" $prTitle
+      "prUrl" $prUrl
+      "threads" $navItems
+    )
+  }}
+  {{ if ne $sessionEarliest "" }}
+    {{ $sessionPage = merge $sessionPage (dict "dates" (dict "date" (time.AsTime $sessionEarliest))) }}
+  {{ end }}
+  {{ $.AddPage $sessionPage }}
+
+  {{ range $i, $thread := $threads }}
+    {{ $prev := "" }}
+    {{ $next := "" }}
+    {{ if gt $i 0 }}{{ $prev = index $paths (sub $i 1) }}{{ end }}
+    {{ if lt $i (sub (len $paths) 1) }}{{ $next = index $paths (add $i 1) }}{{ end }}
+
+    {{ $.AddPage (dict
+      "path" (printf "%s/%s" $sessionKey $thread.slug)
+      "kind" "page"
+      "type" "pr-session"
+      "title" $thread.title
+      "params" (dict
+        "sessionKey" $sessionKey
+        "role" $thread.role
+        "number" $thread.number
+        "messages" $thread.messages
+        "prev" $prev
+        "next" $next
+        "prTitle" $prTitle
+        "prUrl" $prUrl
+      )
+    ) }}
+  {{ end }}
+{{ end }}

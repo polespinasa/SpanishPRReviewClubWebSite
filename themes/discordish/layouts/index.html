@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{ $guild := "" }}
+{{ $participantIds := slice }}
+{{ range $prKey, $prFolder := hugo.Data.discord }}
+  {{ range $fileKey, $doc := $prFolder }}
+    {{ if and (not $guild) $doc.guild }}{{ $guild = $doc.guild }}{{ end }}
+    {{ if eq $doc.channel.type "GuildPublicThread" }}
+      {{ range $doc.messages }}
+        {{ if or (eq .type "Default") (eq .type "Reply") }}
+          {{ if not (in $participantIds .author.id) }}
+            {{ $participantIds = $participantIds | append .author.id }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $sessions := .Site.Sections.ByDate.Reverse }}
+
+<section class="hero">
+  {{ with $guild }}
+    {{ with .iconUrl }}
+      {{ $icon := partial "safe-remote.html" . }}
+      {{ if $icon }}
+        <img class="hero-icon" src="{{ $icon.RelPermalink }}" alt="">
+      {{ else }}
+        <img class="hero-icon" src="{{ . }}" alt="">
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  <h1>PR Review Club en Español</h1>
+  <div class="hero-lead">
+    <p>Contribuir a Bitcoin Core puede parecer complicado al principio. El PR Review Club en Español nlo hacemos más accesible a la comunidad hispanohablante.</p>
+    <p>En cada sesión elegimos una Pull Request abierta, la dividimos en preguntas guiadas y la revisamos juntos: analizamos el código, resolvemos dudas y aprendemos cómo piensan quienes mantienen y contribuyen a Bitcoin Core.</p>
+    <p>Esta web es un archivo público de todas las sesiones pasadas, para que puedas consultarlas cuando quieras.</p>
+  </div>
+  {{ if gt (len $sessions) 0 }}
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>{{ len $sessions }}</strong><span>PRs revisadas</span></div>
+      <div class="hero-stat"><strong>{{ len $participantIds }}</strong><span>participantes</span></div>
+    </div>
+  {{ end }}
+</section>
+
+<h2 class="section-heading">Sesiones</h2>
+<ul class="session-list">
+  {{ range $sessions }}
+    <li class="session-card">
+      <a href="{{ .RelPermalink }}">
+        <span class="session-key">{{ .Title }}</span>
+        {{ with .Params.prTitle }}<span class="session-pr-title">{{ . }}</span>{{ end }}
+      </a>
+      {{ with .Params.prUrl }}<a class="session-pr-link" href="{{ . }}" target="_blank" rel="noopener">Ver PR en GitHub ↗</a>{{ end }}
+    </li>
+  {{ else }}
+    <li>Todavía no hay sesiones. Añade exportaciones de Discord en <code>data/discord/</code>.</li>
+  {{ end }}
+</ul>
+{{ end }}
