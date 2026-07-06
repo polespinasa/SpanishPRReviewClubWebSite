@@ -145,14 +145,38 @@
   {{ $sessionKey := . }}
   {{ $threads := sort (where $allThreads "sessionKey" $sessionKey) "order" }}
 
+  {{/* El número de PR ya está en el nombre de la sesión (p.ej. "pr-34075"),
+       así que la URL de GitHub sale directa de ahí en vez de depender del
+       embed que genera Discord al pegar el link. */}}
+  {{ $prNumber := "" }}
+  {{ $numMatch := findRESubmatch `pr-(\d+)` $sessionKey 1 }}
+  {{ if gt (len $numMatch) 0 }}{{ $prNumber = index (index $numMatch 0) 1 }}{{ end }}
+
   {{ $prTitle := $sessionKey }}
   {{ $prUrl := "" }}
-  {{ range $threads }}
-    {{ if eq .role "intro" }}
-      {{ range .messages }}
-        {{ if .embed }}
-          {{ $prTitle = .embed.title }}
-          {{ $prUrl = .embed.url }}
+  {{ if $prNumber }}
+    {{ $prUrl = printf "https://github.com/bitcoin/bitcoin/pull/%s" $prNumber }}
+    {{ $apiUrl := printf "https://api.github.com/repos/bitcoin/bitcoin/pulls/%s" $prNumber }}
+    {{ with try (resources.GetRemote $apiUrl) }}
+      {{ with .Err }}
+        {{ warnf "No se pudo obtener el título de la PR %s desde la API de GitHub: %s" $prNumber . }}
+      {{ else with .Value }}
+        {{ with (. | transform.Unmarshal).title }}{{ $prTitle = . }}{{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Si la API de GitHub no dio título (fallo de red, rate limit...), se
+       recurre al embed que Discord genera al pegar el link en el hilo de
+       intro, como hacía antes. */}}
+  {{ if eq $prTitle $sessionKey }}
+    {{ range $threads }}
+      {{ if eq .role "intro" }}
+        {{ range .messages }}
+          {{ if .embed }}
+            {{ $prTitle = .embed.title }}
+            {{ if eq $prUrl "" }}{{ $prUrl = .embed.url }}{{ end }}
+          {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
