@@ -87,6 +87,20 @@ a:hover { text-decoration: underline; }
   text-decoration: none !important;
 }
 
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.discord-link {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-muted) !important;
+  text-decoration: none !important;
+}
+.discord-link:hover { color: var(--accent) !important; }
+
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -125,6 +139,27 @@ a:hover { text-decoration: underline; }
   color: var(--text-faint);
   font-size: 0.78rem;
   padding: 2.5rem 1rem 3rem;
+}
+
+.footer-sponsor {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  padding: 0.45rem 0.9rem;
+  background: #fbfbfb;
+  border-radius: var(--radius-md);
+}
+
+.footer-sponsor-logo {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+.footer-sponsor span {
+  color: #3a3a3a;
+  font-size: 0.76rem;
 }
 
 .breadcrumb {
@@ -177,6 +212,12 @@ h1 {
 }
 .hero-lead p { margin: 0 0 0.85rem; }
 .hero-lead p:last-child { margin-bottom: 0; }
+
+.hero-cta {
+  margin-top: 1.25rem !important;
+  font-size: 0.92rem;
+}
+.hero-cta a { font-weight: 600; }
 
 .hero-stats {
   display: flex;
