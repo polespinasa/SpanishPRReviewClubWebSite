@@ -1,7 +1,11 @@
 <footer class="site-footer">
   <p class="footer-sponsor">
-    <img src="/images/b4os.png" alt="Librería de Satoshi" class="footer-sponsor-logo">
-    <span>Con el apoyo de la Librería de Satoshi</span>
+    {{ with resources.Get "images/b4os.png" }}
+      {{ with . | fingerprint }}
+        <img src="{{ .RelPermalink }}" alt="Librería de Satoshi" class="footer-sponsor-logo">
+      {{ end }}
+    {{ end }}
+    <span>Una iniciativa de Librería de Satoshi</span>
   </p>
   <p>Archivo generado a partir de las sesiones de Discord del PR Review Club en Español.</p>
 </footer>
