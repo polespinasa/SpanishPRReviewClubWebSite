@@ -1,0 +1,10 @@
+{{ define "main" }}
+<nav class="breadcrumb">
+  <a href="{{ .Site.Home.RelPermalink }}">← Inicio</a>
+</nav>
+
+<article class="prose">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</article>
+{{ end }}
