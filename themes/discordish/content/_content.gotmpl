@@ -38,15 +38,22 @@
              consecutivos del mismo autor como hace el propio Discord
              (sin repetir avatar/nombre). */}}
         {{ $prevAuthorId := "" }}
-        {{/* Timestamp más antiguo del hilo, para poder ordenar las sesiones
-             cronológicamente en la landing en vez de por id de PR. */}}
-        {{ $threadEarliest := "" }}
+        {{/* Timestamp más reciente del hilo, para poder ordenar las sesiones
+             cronológicamente en la landing en vez de por id de PR.
+
+             El primer mensaje de un hilo de pregunta es el enunciado, que el
+             moderador publica con antelación a la sesión en vivo; las
+             respuestas (el resto de mensajes) llegan el día real de la
+             sesión. Usando el mensaje MÁS RECIENTE del hilo (en vez del más
+             antiguo) nos aseguramos de capturar ese día en vez del día de
+             publicación del enunciado. */}}
+        {{ $threadLatest := "" }}
         {{ range $doc.messages }}
           {{ $msg := . }}
           {{ if or (eq $msg.type "Default") (eq $msg.type "Reply") }}
             {{ if $msg.timestamp }}
-              {{ if or (eq $threadEarliest "") (lt $msg.timestamp $threadEarliest) }}
-                {{ $threadEarliest = $msg.timestamp }}
+              {{ if or (eq $threadLatest "") (gt $msg.timestamp $threadLatest) }}
+                {{ $threadLatest = $msg.timestamp }}
               {{ end }}
             {{ end }}
 
@@ -126,7 +133,7 @@
           "title" $cleanName
           "slug" $slug
           "messages" $renderMessages
-          "earliestTimestamp" $threadEarliest
+          "latestTimestamp" $threadLatest
         ) }}
       {{ end }}
     {{ end }}
@@ -192,11 +199,26 @@
     {{ $navItems = $navItems | append (dict "title" .title "slug" .slug "role" .role "number" .number) }}
   {{ end }}
 
-  {{ $sessionEarliest := "" }}
+  {{/* La fecha de la sesión es el día real en que se discutió, no el día en
+       que se publicaron los enunciados. Se toma el mensaje más reciente
+       entre los hilos de pregunta (ignorando la intro, que puede recibir
+       comentarios sueltos en otros momentos). */}}
+  {{ $sessionDate := "" }}
   {{ range $threads }}
-    {{ if .earliestTimestamp }}
-      {{ if or (eq $sessionEarliest "") (lt .earliestTimestamp $sessionEarliest) }}
-        {{ $sessionEarliest = .earliestTimestamp }}
+    {{ if eq .role "pregunta" }}
+      {{ if .latestTimestamp }}
+        {{ if or (eq $sessionDate "") (gt .latestTimestamp $sessionDate) }}
+          {{ $sessionDate = .latestTimestamp }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if eq $sessionDate "" }}
+    {{ range $threads }}
+      {{ if .latestTimestamp }}
+        {{ if or (eq $sessionDate "") (gt .latestTimestamp $sessionDate) }}
+          {{ $sessionDate = .latestTimestamp }}
+        {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -212,8 +234,8 @@
       "threads" $navItems
     )
   }}
-  {{ if ne $sessionEarliest "" }}
-    {{ $sessionPage = merge $sessionPage (dict "dates" (dict "date" (time.AsTime $sessionEarliest))) }}
+  {{ if ne $sessionDate "" }}
+    {{ $sessionPage = merge $sessionPage (dict "dates" (dict "date" (time.AsTime $sessionDate))) }}
   {{ end }}
   {{ $.AddPage $sessionPage }}
 

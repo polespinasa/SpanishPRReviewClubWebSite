@@ -22,6 +22,10 @@
   --radius-md: 8px;
   --font-sans: "Inter var", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", monospace;
+  /* El logo de la Librería de Satoshi es oscuro y necesita un fondo claro
+     detrás para leerse sobre el fondo oscuro del tema; en el tema claro el
+     propio fondo de la página ya le sirve, así que no hace falta tarjeta. */
+  --footer-sponsor-bg: #d9d9da;
 }
 
 /* Sigue la preferencia del sistema mientras no haya elección manual guardada. */
@@ -38,6 +42,7 @@
     --hairline: rgba(0, 0, 0, 0.08);
     --hairline-strong: rgba(0, 0, 0, 0.16);
     --hover: rgba(0, 0, 0, 0.04);
+    --footer-sponsor-bg: transparent;
   }
 }
 
@@ -54,6 +59,7 @@
   --hairline: rgba(0, 0, 0, 0.08);
   --hairline-strong: rgba(0, 0, 0, 0.16);
   --hover: rgba(0, 0, 0, 0.04);
+  --footer-sponsor-bg: transparent;
 }
 
 * { box-sizing: border-box; }
@@ -144,22 +150,22 @@ a:hover { text-decoration: underline; }
 .footer-sponsor {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.15rem;
   margin-bottom: 1.25rem;
   padding: 0.45rem 0.9rem;
-  background: #fbfbfb;
+  background: var(--footer-sponsor-bg);
   border-radius: var(--radius-md);
 }
 
 .footer-sponsor-logo {
-  height: 64px;
+  height: 128px;
   width: auto;
   display: block;
 }
 
 .footer-sponsor span {
   color: #3a3a3a;
-  font-size: 0.76rem;
+  font-size: 1.05rem;
 }
 
 .breadcrumb {
