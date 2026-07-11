@@ -1,0 +1,27 @@
+# Anuncio de la próxima sesión, mostrado en la landing por encima de "Sesiones".
+#
+# Se edita a mano, más o menos una vez al mes:
+#   Fase 1 (al anunciar la sesión): rellenar title, date_display, event_url,
+#     host y pr. Dejar questions vacío (usa questions_note mientras tanto).
+#   Fase 2 (unos días antes, cuando se publican las preguntas): rellenar la
+#     lista questions con el enunciado de cada una.
+#
+# Cuando la sesión ya haya pasado (se haya convertido en una entrada de
+# data/discord/), poner enabled: false hasta que se anuncie la siguiente.
+
+enabled: true
+
+title: "Nuevo PR Review Club!!"
+date_display: "Jueves 30 de Julio a las 7pm CEST"
+event_url: "https://discord.com/events/1483535932169781451/1524444588754993212"
+
+host:
+  name: "Pol Espinasa"
+  url: "https://x.com/sliv3r__"
+
+pr:
+  name: "#35501 — wallet: store all witness variants of a transaction"
+  url: "https://github.com/bitcoin/bitcoin/pull/35501"
+
+questions_note: "Las preguntas serán publicadas en unos días, pero el código ya se puede ir revisando. Como siempre, es interesante revisar el PR y preparar las respuestas a las preguntas antes del review club."
+questions: []

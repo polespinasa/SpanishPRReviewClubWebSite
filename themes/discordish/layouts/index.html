@@ -44,6 +44,50 @@
   {{ end }}
 </section>
 
+{{ with hugo.Data.next_session }}
+  {{ if .enabled }}
+    <section class="next-session">
+      <h2 class="section-heading">Próxima sesión</h2>
+      <div class="next-session-card">
+        {{ if .event_url }}
+          <a class="next-session-title" href="{{ .event_url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        {{ else }}
+          <span class="next-session-title">{{ .title }}</span>
+        {{ end }}
+        {{ with .date_display }}<span class="next-session-date">{{ . }}</span>{{ end }}
+
+        <dl class="next-session-meta">
+          {{ with .host }}
+            {{ if .name }}
+              <div>
+                <dt>Host</dt>
+                <dd>{{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</dd>
+              </div>
+            {{ end }}
+          {{ end }}
+          {{ with .pr }}
+            {{ if .name }}
+              <div>
+                <dt>PR</dt>
+                <dd>{{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</dd>
+              </div>
+            {{ end }}
+          {{ end }}
+        </dl>
+
+        {{ if .questions }}
+          <p class="next-session-questions-label">Preguntas</p>
+          <ol class="next-session-questions">
+            {{ range .questions }}<li>{{ . }}</li>{{ end }}
+          </ol>
+        {{ else }}
+          {{ with .questions_note }}<p class="next-session-note">{{ . }}</p>{{ end }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
+
 <h2 class="section-heading">Sesiones</h2>
 <ul class="session-list">
   {{ range $sessions }}
