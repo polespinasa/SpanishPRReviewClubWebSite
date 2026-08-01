@@ -1,0 +1,1259 @@
+{
+  "guild": {
+    "id": "1483535932169781451",
+    "name": "Bitcoin Core PR review Club en Español",
+    "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+  },
+  "channel": {
+    "id": "1529552145823830096",
+    "type": "GuildPublicThread",
+    "categoryId": "1524438319801434234",
+    "category": "pr-35501",
+    "name": "Pregunta 8",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-08-01T23:07:34.0042399+02:00",
+  "messages": [
+    {
+      "id": "1529552145823830096",
+      "type": "Default",
+      "timestamp": "2026-07-22T20:14:09.269+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 8** -> El esquema de la DB almacena la variante canónica en el registro principal `tx` y todas las variantes (incluyendo la canónica) en registros `wtxvariant`. ¿Por qué no almacenar solo las variantes no canónicas en registros `wtxvariant`, evitando la redundancia?",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532446179688714304",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:54:00.711+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Venga quien sabe esta?",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532446306243706930",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:54:30.884+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83E\uDD14",
+      "author": {
+        "id": "688930139534655556",
+        "name": "nacho_porte",
+        "discriminator": "0000",
+        "nickname": "nacho_porte",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83E\uDD14",
+          "code": "thinking",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f914.svg"
+        }
+      ]
+    },
+    {
+      "id": "1532446332990652596",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:54:37.261+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDC40",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDC40",
+          "code": "eyes",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f440.svg"
+        }
+      ]
+    },
+    {
+      "id": "1532446428583034972",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:55:00.052+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Por retrocompatibilidad, he leído por ahí \uD83D\uDE01",
+      "author": {
+        "id": "980937364132208642",
+        "name": "santochibtc",
+        "discriminator": "0000",
+        "nickname": "Santochibtc",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fb.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDE01",
+          "code": "grin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f601.svg"
+        }
+      ]
+    },
+    {
+      "id": "1532446778593513692",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:56:23.501+02:00",
+      "timestampEdited": "2026-07-30T19:56:33.45+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "supongo que también es mejor porque siempre vas a buscarla al mapa  y no  tienes que mirar en dos sitios",
+      "author": {
+        "id": "980937364132208642",
+        "name": "santochibtc",
+        "discriminator": "0000",
+        "nickname": "Santochibtc",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532446833107013702",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:56:36.498+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "hay una pequeña pista en el PR y es que esta pregunta es una pregunta que me surgio a mi revisando el PR, asi que la pregunte directamente\nhttps://github.com/bitcoin/bitcoin/pull/35501#discussion_r3631751605",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "wallet: store all witness variants of a transaction by achow101 · ...",
+          "url": "https://github.com/bitcoin/bitcoin/pull/35501",
+          "timestamp": null,
+          "description": "When the wallet is presented with a transaction that has the same txid as one already known to the wallet, but has a different witness, instead of ignoring the transaction, store it alongside the k...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/TFkBVv01aWCeIi7VHiy7tAtd7y-_Hiko7JGiumXor-I/https/opengraph.githubassets.com/a1e0371ceac074967eb60dda327603a867bd6559905513c100a1cbf4a851be73/bitcoin/bitcoin/pull/35501",
+            "canonicalUrl": "https://opengraph.githubassets.com/a1e0371ceac074967eb60dda327603a867bd6559905513c100a1cbf4a851be73/bitcoin/bitcoin/pull/35501",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447036870234112",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:57:25.079+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "basicamente es simplicidad",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4C",
+            "code": "ok_hand",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44c.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "688930139534655556",
+              "name": "nacho_porte",
+              "discriminator": "0000",
+              "nickname": "nacho_porte",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447059515277392",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:57:30.478+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "guardar todo en el mismo sitio es mas facil",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447113948954775",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:57:43.456+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "lo cual hace que se duplique la canonica",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447373282906132",
+      "type": "Reply",
+      "timestamp": "2026-07-30T19:58:45.286+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "en el commit msg lo dice pero no lo entiendo del todo",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "980937364132208642",
+          "name": "santochibtc",
+          "discriminator": "0000",
+          "nickname": "Santochibtc",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1532446428583034972",
+        "channelId": "1529552145823830096",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447381432565840",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:58:47.229+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "se podria solo guardar el wtxid y no la tx entera pero es necesaria por temas de compatibilidad",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "688930139534655556",
+              "name": "nacho_porte",
+              "discriminator": "0000",
+              "nickname": "nacho_porte",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447573598535921",
+      "type": "Reply",
+      "timestamp": "2026-07-30T19:59:33.045+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Por retrocompatibilidad se guarda en el tx record la tx entera y no solo el wtxid",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "980937364132208642",
+          "name": "santochibtc",
+          "discriminator": "0000",
+          "nickname": "Santochibtc",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1532446428583034972",
+        "channelId": "1529552145823830096",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447711125573814",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:00:05.834+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "esto es asi porque si cambias la estructura del fichero de la wallet y lo intentas cargar en Core version previa a esta PR no sabria leer el fichero",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "688930139534655556",
+              "name": "nacho_porte",
+              "discriminator": "0000",
+              "nickname": "nacho_porte",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447814452514939",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:00:30.469+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Ah vale",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447860292059258",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:00:41.398+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "La segunda parte es por simplicidad, si no guardas una se complica todo con reorgs",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "174230257845403648",
+              "name": ".sliv3r",
+              "discriminator": "0000",
+              "nickname": "Pol Espinasa",
+              "color": "#E67E22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447922481008823",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:00:56.225+02:00",
+      "timestampEdited": "2026-07-30T20:01:00.904+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "¿pero eso no es raro, intentar cargar una versión nueva del fichero en una versión previa del software?",
+      "author": {
+        "id": "980937364132208642",
+        "name": "santochibtc",
+        "discriminator": "0000",
+        "nickname": "Santochibtc",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532447971239788734",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:01:07.85+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "No",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532448011123425563",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:01:17.359+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Si tienes una wallet ayer y actualizas no deberías perder los datos",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532448080824111307",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:01:33.977+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Imagina el caos si la gente no puede cargar sus wallets",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532448092287144028",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:01:36.71+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Tampoco al reves es raro",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532448141411094721",
+      "type": "Reply",
+      "timestamp": "2026-07-30T20:01:48.422+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "podria ser, como desarrollador de software nunca sabes lo que va a hacer el usuario y por lo tanto tienes que intentar mantener la maxima compatibilidad possible, hacia adelante y hacia atras",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "980937364132208642",
+          "name": "santochibtc",
+          "discriminator": "0000",
+          "nickname": "Santochibtc",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1532447922481008823",
+        "channelId": "1529552145823830096",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532448168447447270",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:01:54.868+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "nunca falta alguien que lo hace jajajaj",
+      "author": {
+        "id": "688930139534655556",
+        "name": "nacho_porte",
+        "discriminator": "0000",
+        "nickname": "nacho_porte",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE05",
+            "code": "sweat_smile",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f605.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532448228178395207",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:02:09.109+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "quizas no te gusta el nuevo update y quieres volver atras",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            {
+              "id": "688930139534655556",
+              "name": "nacho_porte",
+              "discriminator": "0000",
+              "nickname": "nacho_porte",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532448315596083400",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:02:29.951+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "al final un wallet es dinero de gente, hay que ser muy cuidadoso con estos cambios",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532448331664593116",
+      "type": "Reply",
+      "timestamp": "2026-07-30T20:02:33.782+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hay algún cambio de op return en la 32?\uD83D\uDC40",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDD23",
+            "code": "rofl",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f923.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "174230257845403648",
+              "name": ".sliv3r",
+              "discriminator": "0000",
+              "nickname": "Pol Espinasa",
+              "color": "#E67E22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "174230257845403648",
+          "name": ".sliv3r",
+          "discriminator": "0000",
+          "nickname": "Pol Espinasa",
+          "color": "#E67E22",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1483542665147453490",
+              "name": "Administrador",
+              "color": "#E67E22",
+              "position": 2
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1532448228178395207",
+        "channelId": "1529552145823830096",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDC40",
+          "code": "eyes",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f440.svg"
+        }
+      ]
+    },
+    {
+      "id": "1532448428812927118",
+      "type": "Default",
+      "timestamp": "2026-07-30T20:02:56.944+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "vamos a la siguiente que ya vamos pasados de tiempo",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "⏭️",
+            "code": "track_next",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/23ed.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "688930139534655556",
+              "name": "nacho_porte",
+              "discriminator": "0000",
+              "nickname": "nacho_porte",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 27
+}

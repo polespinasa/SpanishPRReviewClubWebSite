@@ -1,0 +1,539 @@
+{
+  "guild": {
+    "id": "1483535932169781451",
+    "name": "Bitcoin Core PR review Club en Español",
+    "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+  },
+  "channel": {
+    "id": "1529552031960793199",
+    "type": "GuildPublicThread",
+    "categoryId": "1524438319801434234",
+    "category": "pr-35501",
+    "name": "Pregunta 7",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-08-01T23:07:41.2750356+02:00",
+  "messages": [
+    {
+      "id": "1529552031960793199",
+      "type": "Default",
+      "timestamp": "2026-07-22T20:13:42.122+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 7** -> El PR refactoriza `CWalletTx` para ser RAII. ¿Qué principio de diseño sigue esto y qué clase de bugs previene?",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532445155905245264",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:49:56.622+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Venga va una pregunta de programación, quien se anima?",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532445233764241508",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:50:15.185+02:00",
+      "timestampEdited": "2026-07-30T19:50:54.793+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Previene UB (Undefined Behavior) y se hace para que la variante quede definida al construir la `CWalletTx`. De esa manera, no es un objeto a medio construir.",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "174230257845403648",
+              "name": ".sliv3r",
+              "discriminator": "0000",
+              "nickname": "Pol Espinasa",
+              "color": "#E67E22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+            },
+            {
+              "id": "688930139534655556",
+              "name": "nacho_porte",
+              "discriminator": "0000",
+              "nickname": "nacho_porte",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532445404552233230",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:50:55.904+02:00",
+      "timestampEdited": "2026-07-30T19:51:27.209+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Claro previene CWalletTx sin tx y un puntero a una referencia null",
+      "author": {
+        "id": "688930139534655556",
+        "name": "nacho_porte",
+        "discriminator": "0000",
+        "nickname": "nacho_porte",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532445488341586102",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:51:15.881+02:00",
+      "timestampEdited": "2026-07-30T19:52:21.52+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Los recursos que necesita un objeto se adquieren al inicializarlo y se liberan al destruirlo. La destrucción está garantizada incluso en caso de excepcion. Se garantiza que el recurso está disponible en todas las funciones del objeto, no es necesario comprobarlo. previene fugas de memoria por objetos que no se destruyen",
+      "author": {
+        "id": "980937364132208642",
+        "name": "santochibtc",
+        "discriminator": "0000",
+        "nickname": "Santochibtc",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532445523469013132",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:51:24.256+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Antes la tx podía ser nullptr",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "174230257845403648",
+              "name": ".sliv3r",
+              "discriminator": "0000",
+              "nickname": "Pol Espinasa",
+              "color": "#E67E22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532445641828208651",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:51:52.475+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Exacto se previene que puedas llamar a un objeto que es nulo, sobretodo cuando hablamos de punteros",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fb.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532445780273528963",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:52:25.483+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "lo cual podria ser un problema y podria crashear el codigo",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "688930139534655556",
+              "name": "nacho_porte",
+              "discriminator": "0000",
+              "nickname": "nacho_porte",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532445862414778632",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:52:45.067+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "a parte de que tiene mas sentido que no puedas tener CWalletTx nulos",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532445899517726880",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:52:53.913+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "No tiene sentido tener una entrada de CWalletTx si no existe la transaccion!",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "688930139534655556",
+              "name": "nacho_porte",
+              "discriminator": "0000",
+              "nickname": "nacho_porte",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532446102882881546",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:53:42.399+02:00",
+      "timestampEdited": "2026-07-30T19:53:48.695+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Ahora se puede construir un `CWalletTx` con un blob",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532446103608496158",
+      "type": "Default",
+      "timestamp": "2026-07-30T19:53:42.572+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "pasamos a la siguiente",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 12
+}
