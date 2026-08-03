@@ -9,7 +9,7 @@
 # Cuando la sesión ya haya pasado (se haya convertido en una entrada de
 # data/discord/), poner enabled: false hasta que se anuncie la siguiente.
 
-enabled: true
+enabled: false
 
 title: "Nuevo PR Review Club!!"
 date_display: "Jueves 30 de Julio a las 7pm CEST"
