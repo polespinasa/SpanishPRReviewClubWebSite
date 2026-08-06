@@ -1,0 +1,13 @@
+# Session metadata, next to the Discord exports. Same shape as
+# next_session.yaml: fill host from there when the session is over, add tags.
+# author is optional; it falls back to the PR author from the GitHub API.
+
+author: achow101
+
+host:
+  name: "Pol Espinasa"
+  url: "https://x.com/sliv3r__"
+
+tags:
+  - wallet
+  - tx

@@ -8,9 +8,16 @@
 */}}
 
 {{ $allThreads := slice }}
+{{ $sessionMeta := dict }}
 
 {{ range $prKey, $prFolder := hugo.Data.discord }}
+  {{ $meta := index $prFolder "metadata" }}
   {{ range $fileKey, $doc := $prFolder }}
+    {{/* metadata.yaml sits next to the exports and has no channel. */}}
+    {{ if not $doc.channel }}{{ continue }}{{ end }}
+    {{ with $meta }}
+      {{ $sessionMeta = merge $sessionMeta (dict $doc.channel.category .) }}
+    {{ end }}
     {{ if eq $doc.channel.type "GuildPublicThread" }}
       {{ $cleanName := strings.TrimSpace (strings.Replace $doc.channel.name "*" "") }}
       {{ $role := "" }}
@@ -161,6 +168,7 @@
 
   {{ $prTitle := $sessionKey }}
   {{ $prUrl := "" }}
+  {{ $prAuthor := "" }}
   {{ if $prNumber }}
     {{ $prUrl = printf "https://github.com/bitcoin/bitcoin/pull/%s" $prNumber }}
     {{ $apiUrl := printf "https://api.github.com/repos/bitcoin/bitcoin/pulls/%s" $prNumber }}
@@ -168,7 +176,9 @@
       {{ with .Err }}
         {{ warnf "No se pudo obtener el título de la PR %s desde la API de GitHub: %s" $prNumber . }}
       {{ else with .Value }}
-        {{ with (. | transform.Unmarshal).title }}{{ $prTitle = . }}{{ end }}
+        {{ $api := . | transform.Unmarshal }}
+        {{ with $api.title }}{{ $prTitle = . }}{{ end }}
+        {{ with $api.user }}{{ with .login }}{{ $prAuthor = . }}{{ end }}{{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -223,6 +233,20 @@
     {{ end }}
   {{ end }}
 
+  {{/* Hand-written metadata.yaml in the session's export folder (host, tags),
+       not derivable from the Discord export. Author also comes from the GitHub
+       API, but the YAML wins so filtering survives an API failure. */}}
+  {{ $meta := index $sessionMeta $sessionKey | default dict }}
+  {{ $sessionHost := dict }}
+  {{ $sessionTags := slice }}
+  {{ if $meta }}
+    {{ with $meta.author }}{{ $prAuthor = . }}{{ end }}
+    {{ with $meta.host }}{{ $sessionHost = . }}{{ end }}
+    {{ with $meta.tags }}{{ $sessionTags = . }}{{ end }}
+  {{ else }}
+    {{ warnf "Sin metadatos para la sesión %s: crea metadata.yaml junto a sus exports (host, tags)" $sessionKey }}
+  {{ end }}
+
   {{ $sessionPage := dict
     "path" $sessionKey
     "kind" "section"
@@ -231,6 +255,9 @@
     "params" (dict
       "prTitle" $prTitle
       "prUrl" $prUrl
+      "prAuthor" $prAuthor
+      "host" $sessionHost
+      "tags" $sessionTags
       "threads" $navItems
     )
   }}

@@ -325,12 +325,68 @@ a.next-session-title:hover { color: var(--accent) !important; }
 .next-session-questions li:last-child { margin-bottom: 0; }
 
 /* Home: session cards */
+.session-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.session-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.session-filter span {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.session-filter select {
+  font: inherit;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hairline-strong);
+  background: var(--bg-raised);
+  color: var(--text);
+}
+
+.session-filter-reset {
+  font: inherit;
+  font-size: 0.83rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hairline-strong);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.session-filter-reset:hover { color: var(--text); }
+
+.session-filter-count {
+  font-size: 0.83rem;
+  color: var(--text-faint);
+  padding-bottom: 0.45rem;
+}
+
+.session-empty {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
 .session-list {
   list-style: none;
   padding: 0;
   display: grid;
   gap: 0.6rem;
 }
+
+.session-card[hidden] { display: none; }
 
 .session-card {
   background: var(--bg-raised);
@@ -360,6 +416,45 @@ a.next-session-title:hover { color: var(--accent) !important; }
   font-weight: 600;
   color: var(--text) !important;
   text-decoration: none !important;
+}
+
+.session-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0.45rem 0 0;
+  font-size: 0.83rem;
+  color: var(--text-faint);
+}
+
+.session-meta strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.session-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.5rem 0 0;
+}
+
+.session-tag {
+  font: inherit;
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hairline);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.session-tag:hover { border-color: var(--hairline-strong); color: var(--text); }
+.session-tag[aria-pressed="true"] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--text);
 }
 
 .session-pr-link {
