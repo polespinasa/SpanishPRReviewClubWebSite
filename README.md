@@ -8,6 +8,7 @@ El sitio se genera con [Hugo](https://gohugo.io/) usando un tema propio (`themes
 
 - `data/discord/` — JSON exportados de Discord, una carpeta por sesión (una PR revisada), más un `metadata.yaml` por carpeta con host y tags.
 - `data/next_session.yaml` — anuncio de la próxima sesión que se muestra en la landing.
+- `data/pr_template.yml` — plantilla vacía de una sesión nueva; se copia sobre `data/next_session.yaml` al anunciarla.
 - `themes/discordish/` — tema Hugo: layouts, CSS y el adaptador de contenido (`content/_content.gotmpl`) que convierte los JSON en páginas.
 - `hugo.toml` — configuración del sitio.
 - `flake.nix` — entorno de desarrollo reproducible (Hugo + just + git).
@@ -53,9 +54,15 @@ El despliegue es automático: en cada push a `main`, el workflow `.github/workfl
 
 ## Anunciar la próxima sesión
 
-`data/next_session.yaml` es el único contenido que se escribe a mano. Con `enabled: true` pinta una tarjeta "Próxima sesión" encima del listado de sesiones pasadas.
+`data/next_session.yaml` es el único contenido que se escribe a mano. Con `enabled: true` renderiza una tarjeta "Próxima sesión" encima del listado de sesiones pasadas.
 
-Al anunciar la sesión, rellena todo menos las preguntas:
+Al anunciar la sesión, parte de la plantilla vacía:
+
+```sh
+cp data/pr_template.yml data/next_session.yaml
+```
+
+y rellena todo menos las preguntas:
 
 ```yaml
 enabled: true
@@ -138,7 +145,13 @@ Requisitos para que un hilo se detecte correctamente:
 
 ### 3. Añadir el `metadata.yaml` de la sesión
 
-En esa misma carpeta, junto a los JSON, crea un `metadata.yaml` (mismo nombre para todas las sesiones). Es lo que alimenta el filtro por autor, host y tema de la landing:
+En esa misma carpeta, junto a los JSON, va el `metadata.yaml` de la sesión (mismo nombre para todas). Es lo que alimenta el filtro por autor, host y tema de la landing, y sale del propio anuncio: mueve ahí el `next_session.yaml` que ya tenías relleno y añádele `author` y `tags`.
+
+```sh
+mv data/next_session.yaml data/discord/pr-XXXXX/metadata.yaml
+```
+
+De ese fichero solo se leen estas tres claves (el resto —`title`, `pr`, `questions`...— se ignora, así que puedes dejarlo o borrarlo):
 
 ```yaml
 author: achow101          # usuario de GitHub que abrió la PR
@@ -152,13 +165,13 @@ tags:
   - tx
 ```
 
-El bloque `host` se puede copiar tal cual del `next_session.yaml` del anuncio. `author` es opcional: si lo omites se usa el autor que devuelva la API de GitHub, pero conviene ponerlo para que el filtro siga funcionando si la API falla. Las `tags` son libres; reutiliza las que ya usan otras sesiones (`wallet`, `mempool`, `p2p`, `fees`, `indices`, ...) para no llenar el desplegable de duplicados.
+`author` es opcional: si lo omites se usa el autor que devuelva la API de GitHub, pero conviene ponerlo para que el filtro siga funcionando si la API falla. Las `tags` son libres; reutiliza las que ya usan otras sesiones (`wallet`, `mempool`, `p2p`, `fees`, `indices`, ...) para no llenar el desplegable de duplicados.
 
 Si falta el fichero, la sesión se publica igual pero sin datos de filtro, y el build avisa con `WARN Sin metadatos para la sesión pr-XXXXX`.
 
 ### 4. Desactivar el anuncio
 
-La sesión ya no es "la próxima": pon `enabled: false` en `data/next_session.yaml` hasta el siguiente anuncio.
+La sesión ya no es "la próxima". Si moviste el `next_session.yaml` en el paso anterior no hay nada que hacer: sin ese fichero la landing no pinta la tarjeta, y el siguiente anuncio vuelve a partir de `data/pr_template.yml`. Si en vez de moverlo lo dejaste donde estaba, ponle `enabled: false` hasta el siguiente anuncio.
 
 ### 5. Comprobar y desplegar
 
