@@ -3,6 +3,7 @@
 {{ $participantIds := slice }}
 {{ range $prKey, $prFolder := hugo.Data.discord }}
   {{ range $fileKey, $doc := $prFolder }}
+    {{ if not $doc.channel }}{{ continue }}{{ end }}
     {{ if and (not $guild) $doc.guild }}{{ $guild = $doc.guild }}{{ end }}
     {{ if eq $doc.channel.type "GuildPublicThread" }}
       {{ range $doc.messages }}
@@ -89,17 +90,99 @@
 {{ end }}
 
 <h2 class="section-heading">Sesiones</h2>
+
+{{/* Filter options are derived from the sessions themselves, so there is no
+     separate tag list to maintain. */}}
+{{ $authors := slice }}
+{{ $hosts := slice }}
+{{ $tags := slice }}
+{{ range $sessions }}
+  {{ with .Params.prAuthor }}
+    {{ if not (in $authors .) }}{{ $authors = $authors | append . }}{{ end }}
+  {{ end }}
+  {{ with .Params.host }}
+    {{ with .name }}{{ if not (in $hosts .) }}{{ $hosts = $hosts | append . }}{{ end }}{{ end }}
+  {{ end }}
+  {{ range .Params.tags }}
+    {{ if not (in $tags .) }}{{ $tags = $tags | append . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $sessions }}
+  {{/* Hidden until JS enables it: the controls do nothing without it. */}}
+  <div class="session-filters" data-session-filters hidden>
+    <label class="session-filter">
+      <span>Autor</span>
+      <select data-filter="author">
+        <option value="">Todos</option>
+        {{ range sort $authors }}<option value="{{ . }}">{{ . }}</option>{{ end }}
+      </select>
+    </label>
+    <label class="session-filter">
+      <span>Host</span>
+      <select data-filter="host">
+        <option value="">Todos</option>
+        {{ range sort $hosts }}<option value="{{ . }}">{{ . }}</option>{{ end }}
+      </select>
+    </label>
+    <label class="session-filter">
+      <span>Tema</span>
+      <select data-filter="tags">
+        <option value="">Todos</option>
+        {{ range sort $tags }}<option value="{{ . }}">{{ . }}</option>{{ end }}
+      </select>
+    </label>
+    <button type="button" class="session-filter-reset" data-filter-reset hidden>Limpiar</button>
+    <span class="session-filter-count" data-filter-count aria-live="polite"></span>
+  </div>
+{{ end }}
+
 <ul class="session-list">
   {{ range $sessions }}
-    <li class="session-card">
+    {{ $host := "" }}
+    {{ $hostUrl := "" }}
+    {{ with .Params.host }}
+      {{ with .name }}{{ $host = . }}{{ end }}
+      {{ with .url }}{{ $hostUrl = . }}{{ end }}
+    {{ end }}
+    <li class="session-card"
+        data-author="{{ .Params.prAuthor }}"
+        data-host="{{ $host }}"
+        data-tags="{{ delimit .Params.tags "|" }}">
       <a href="{{ .RelPermalink }}">
         <span class="session-key">{{ .Title }}{{ if not .Date.IsZero }} · {{ .Date.Format "02/01/2006" }}{{ end }}</span>
         {{ with .Params.prTitle }}<span class="session-pr-title">{{ . }}</span>{{ end }}
       </a>
+
+      {{ if or .Params.prAuthor $host }}
+        <p class="session-meta">
+          {{ with .Params.prAuthor }}
+            <span>Autor <strong><a href="https://github.com/{{ . }}" target="_blank" rel="noopener">{{ . }}</a></strong></span>
+          {{ end }}
+          {{ with $host }}
+            <span>Host <strong>{{ if $hostUrl }}<a href="{{ $hostUrl }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}{{ . }}{{ end }}</strong></span>
+          {{ end }}
+        </p>
+      {{ end }}
+
+      {{ with .Params.tags }}
+        <p class="session-tags">
+          {{ range . }}
+            <button type="button" class="session-tag" data-tag="{{ . }}" aria-pressed="false">{{ . }}</button>
+          {{ end }}
+        </p>
+      {{ end }}
+
       {{ with .Params.prUrl }}<a class="session-pr-link" href="{{ . }}" target="_blank" rel="noopener">Ver PR en GitHub ↗</a>{{ end }}
     </li>
   {{ else }}
     <li>Todavía no hay sesiones. Añade exportaciones de Discord en <code>data/discord/</code>.</li>
   {{ end }}
 </ul>
+
+<p class="session-empty" data-session-empty hidden>No hay sesiones que coincidan con el filtro.</p>
+
+{{ with resources.Get "js/session-filters.js" }}
+  <script defer src="{{ (. | minify).RelPermalink }}"></script>
+{{ end }}
 {{ end }}

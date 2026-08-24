@@ -1,0 +1,29 @@
+# Plantilla de una sesión nueva.
+#
+#   cp data/pr_template.yml data/next_session.yaml
+#
+# cuando ya ha pasado y se archiva la sesion exportando los chats y moviendo este archivo
+# como metadata.yaml a la carpeta data/discord/pr-XXXXX/metadata.yaml
+#
+# Ver "Anunciar la próxima sesión" y "Cerrar una sesión y archivarla" en el README.
+
+enabled: false
+
+title: "Nuevo PR Review Club!!"
+date_display: ""        # p. ej. "Jueves 30 de Julio a las 7pm CEST"
+event_url: ""           # url del evento de Discord, opcional
+
+host:
+  name: ""
+  url: ""               # opcional, deja "" si no hay
+
+pr:
+  name: ""              # p. ej. "#35501 — wallet: store all witness variants of a transaction"
+  url: ""               # https://github.com/bitcoin/bitcoin/pull/XXXXX
+
+questions: []           # lista de preguntas separadas por coma
+questions_note: "Las preguntas se publicarán unos días antes de la sesión."
+
+# Solo se usan una vez archivada la sesión: alimentan los filtros de la landing.
+author: ""              # usuario de GitHub que abrió la PR
+tags: []                # p. ej. [wallet, mempool, p2p]
