@@ -204,9 +204,21 @@
     {{ $paths = $paths | append (printf "%s/%s" $sessionKey .slug) }}
   {{ end }}
 
+  {{/* metadata.yaml de la sesión, leído aquí porque el enunciado de cada
+       pregunta (lista "questions") alimenta el listado de hilos más abajo. */}}
+  {{ $meta := index $sessionMeta $sessionKey | default dict }}
+  {{ $metaQuestions := slice }}
+  {{ with $meta.questions }}{{ $metaQuestions = . }}{{ end }}
+
   {{ $navItems := slice }}
   {{ range $threads }}
-    {{ $navItems = $navItems | append (dict "title" .title "slug" .slug "role" .role "number" .number) }}
+    {{ $questionText := "" }}
+    {{ if eq .role "pregunta" }}
+      {{ if gt (len $metaQuestions) (sub .number 1) }}
+        {{ $questionText = index $metaQuestions (sub .number 1) }}
+      {{ end }}
+    {{ end }}
+    {{ $navItems = $navItems | append (dict "title" .title "slug" .slug "role" .role "number" .number "questionText" $questionText) }}
   {{ end }}
 
   {{/* La fecha de la sesión es el día real en que se discutió, no el día en
@@ -236,7 +248,6 @@
   {{/* Hand-written metadata.yaml in the session's export folder (host, tags),
        not derivable from the Discord export. Author also comes from the GitHub
        API, but the YAML wins so filtering survives an API failure. */}}
-  {{ $meta := index $sessionMeta $sessionKey | default dict }}
   {{ $sessionHost := dict }}
   {{ $sessionTags := slice }}
   {{ if $meta }}

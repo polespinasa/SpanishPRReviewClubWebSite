@@ -489,6 +489,23 @@ a.next-session-title:hover { color: var(--accent) !important; }
   border-color: var(--hairline-strong);
 }
 
+.thread-list-label {
+  font-weight: 600;
+}
+
+.thread-list-question {
+  margin-top: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 400;
+}
+
+.thread-list-question p { margin: 0; }
+.thread-list-question code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
 /* Chat log */
 .chat-log {
   margin-top: 1.5rem;
