@@ -7,3 +7,13 @@ host:
 tags:
   - p2p
   - mempool
+
+questions:
+  - "¿Qué problema busca resolver el PR? ¿Algún incidente en específico que motive el cambio?"
+  - "¿Cómo es el flujo de relay de una transacción? ¿Podrías describir el camino que sigue una transacción desde que entra a la mempool hasta que se emite vía \"INV\"?"
+  - "El PR introduce \"dual token buckets\". ¿Qué es un TokenBucket?"
+  - "En el commit 94d2027 se cambia `m_tx_inventory_to_send` de `std::set<Wtxid>` a `std::vector<Wtxid>`. ¿Qué se gana y qué se pierde? ¿Cómo se manejan los duplicados ahora?"
+  - "Los peers outbound reciben un refill rate de 2.5x más rápido. ¿Por qué privilegiar outbound sobre inbound?"
+  - "Además del comportamiento, el PR introduce una nueva opción de configuración y expone información nueva vía RPC. ¿Qué son esas adiciones?"
+  - "Cuando una transacción llega, el código decide si va por \"immediate relay\" o al backlog global. ¿Cómo funciona ese backlog? ¿Qué pasa con una transacción que cae en el backlog? ¿Cuándo y cómo se drena?"
+  - "¿Has compilado/testeado el PR? ¿Cómo te organizaste para revisarlo? ¿Hay algo que te sorprendió, edge cases que falten, o algo que te gustaría discutir en grupo?"

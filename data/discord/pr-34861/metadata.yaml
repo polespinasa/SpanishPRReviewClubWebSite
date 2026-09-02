@@ -8,3 +8,15 @@ tags:
   - wallet
   - rpc
   - descriptors
+
+questions:
+  - "¿Porque en la descripción del PR se argumenta que el GUI de la wallet de Bitcoin Core no puede crear carteras multisig? ¿Significa eso que con el GUI solo se puede usar single sig?"
+  - "¿Porque el GUI no puede usar RPC calls?"
+  - "Si te fijas en la primera versión de la descripción del PR verás que se hablaba de IPC. Algunos comentarios sugieren que esta nueva interficie no es IPC. ¿Por qué?"
+  - "Cuál es la diferencia entre RPC, IPC y las interfaces de Core?"
+  - "El PR introduce una nueva \"struct\" llamada `ImportDescriptorResult`, posteriormente en la función `ProcessDescriptortImport()` se usa una función \"switch\" para traducir los códigos de error a RPC. ¿Por qué `ImportDescriptorResult` no devuelve directamente los códigos de error correctos?"
+  - "En el commit b88462d758e2d24f278607dc5fbd9dcee6c1a076 algunos reviewers mencionan que gran parte de la funcionalidad que hace `importDescriptors()` puede moverse a `ImportDescriptors()`. ¿Por qué crees que mencionan esto? ¿Estás de acuerdo?"
+  - "En la classe `WalletImpl` se añade un método privado `ProcessDescriptortImport()` que solo devuelve la respuesta de otra función. ¿Por qué crees que se ha hecho esto y no se llama la función `ImportDescriptor()` directamente desde `importDescriptors()`? Lo habrías hecho igual?"
+  - "Hay algunos comentarios que sugieren mover `ImportDescriptors()` a fuera de `CWallet` y crear un nuevo fichero. ¿Qué hace `CWallet`? ¿Por qué la función no necesita estar dentro de `CWallet` realmente?"
+  - "¿Has testeado la interficie? ¿Funciona correctamente? ¿Cómo podría consumirse?"
+  - "Otros comentarios... ¿Tienes alguna propuesta para mejorar el código? ¿Tienes preguntas?"

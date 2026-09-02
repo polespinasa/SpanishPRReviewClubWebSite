@@ -7,3 +7,15 @@ host:
 tags:
   - indices
   - db
+
+questions:
+  - "`BaseIndex` arranca un hilo de fondo que ejecuta `Sync()`. ¿Cuándo se activa este hilo y cuándo deja de usarse? ¿Qué diferencia hay entre el camino de `Sync()` y el de `BlockConnected()` para escribir datos? ¿Por qué existe esta separación?"
+  - "Antes de este cambio, ¿en qué momento exacto se persistían en disco los datos de un bloque indexado (p. ej. las posiciones de txs en `txindex`, o las entradas de filtros en `blockfilterindex`)? ¿Ocurría esto bloque a bloque o en lotes? Se puede observar en `CustomAppend` de cualquier subclase concreta."
+  - "`BaseIndex::Sync()` llama a `Commit()` cada 30 segundos y cuando el índice alcanza el tip. ¿Qué escribe exactamente `Commit()` en disco? ¿Es lo mismo que los datos del índice escritos en `CustomAppend`? ¿Qué ocurriría si el nodo se apaga entre una escritura de datos y una llamada a `Commit()`?"
+  - "Antes de este cambio, `NextSyncBlock` se llamaba en cada iteración del bucle, adquiriendo `cs_main` por cada bloque. El hilo de validación también necesita `cs_main` para procesar bloques. ¿Qué impacto tiene esto durante IBD? ¿Cómo lo mejora la nueva ventana de bloques, y qué trade-offs conlleva?"
+  - "Con el batching, el índice procesa N bloques en memoria y los persiste todos de golpe con un único `WriteBatch`. Si el nodo se apaga a mitad de una ventana, ¿desde qué punto reanuda el índice? ¿Es seguro reescribir entradas ya presentes en LevelDB?"
+  - "El `Commit()` existente usa un timer de 30 segundos. ¿Por qué se elige una ventana de número de bloques fija para los batches en lugar de reutilizar una ventana temporal? ¿Qué ventajas concretas ofrece en cuanto a testabilidad y uso de memoria predecible?"
+  - "Con el batching, si ocurre una reorg mientras el índice procesa un batch `[N, N+499]` y el fork point está en `N+200`, ¿qué debería ocurrir? ¿Cómo lo maneja el código actual?"
+  - "Un `CDBBatch` acumula entradas en memoria hasta el flush. Con batch=500, ¿es el número de bloques una buena referencia como modelo de uso de memoria real? ¿Qué implicación tiene esto en dispositivos con poca RAM?"
+  - "Los resultados en HDD muestran ~27% de mejora en `txospenderindex` frente a ~0.5% en `coinstatsindex`. ¿Qué explica esta diferencia?"
+  - "Este PR se presenta como precursor de la paralelización de #26966. ¿Qué elementos concretos del diseño son prerequisitos para workers concurrentes? ¿Es correcto aterrizar este cambio de forma independiente?"
