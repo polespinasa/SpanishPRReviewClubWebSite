@@ -10,7 +10,8 @@
   {{ range .Params.threads }}
     <li>
       <a href="{{ printf "%s/%s/" $base .slug }}">
-        {{ if eq .role "intro" }}Introducción{{ else }}Pregunta {{ .number }}{{ end }}
+        <div class="thread-list-label">{{ if eq .role "intro" }}Introducción{{ else }}Pregunta {{ .number }}{{ end }}</div>
+        {{ with .questionText }}<div class="thread-list-question">{{ markdownify . }}</div>{{ end }}
       </a>
     </li>
   {{ end }}

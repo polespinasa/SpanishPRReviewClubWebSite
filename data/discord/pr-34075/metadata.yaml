@@ -7,3 +7,15 @@ host:
 tags:
   - fees
   - mempool
+
+questions:
+  - "¿Qué problemas tiene la manera actual en que calculamos las fees con `CBlockPolicyEstimator`?"
+  - "En el commit e61ffe0 se limita el uso del struct `FeeCalculation` y se introduce el struct `GetMinimumFeeRateResult`. ¿Por qué este cambio? ¿Qué información faltaba o sobraba?"
+  - "En el commit 579261c se crea `FeeSource`. ¿Por qué es necesario ese struct y cuál es la diferencia con `FeeReason`?"
+  - "¿Por qué en el commit 04aae1e se evita que el test utilice la mempool?"
+  - "En el commit d53001e se introduce la clase `FeeRateEstimatorManager`. ¿Cuál es el papel de esta clase? ¿Por qué esta clase hereda `CValidationInterface`?"
+  - "En el commit db99be se introduce el nuevo estimator: `MemPoolFeeRateEstimator`. ¿Cómo calcula la fee este nuevo estimator? ¿En qué caso `CalculatePercentiles` no puede calcular la fee? ¿Qué se hace entonces?"
+  - "En el commit ff51bb2 se añade una caché para el `mempoolfeerateestimator`. ¿Por qué es importante tener esta caché? ¿Qué condiciones hacen que se vuelva a calcular de nuevo?"
+  - "En el commit 2303657 se modifica `MempoolTransactionsRemovedForBlock` en `validationinterface` para incluir también las transacciones del propio bloque. ¿Por qué el `MemPoolFeeRateEstimator` necesita las transacciones del bloque y no solo las de la mempool?"
+  - "¿Qué está mirando la función `IsMempoolHealthy`? ¿Qué pasa cuando hay un fork?"
+  - "En `FeeRateEstimatorManager::GetFeeRateEstimate` se combina el estimate del `CBlockPolicyEstimator` con el del `MemPoolFeeRateEstimator`. ¿En qué condiciones se devuelve cada estimador? ¿Qué pasa si el mempool estimator retorna un error o la mempool no está sana?"

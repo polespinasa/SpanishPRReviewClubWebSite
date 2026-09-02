@@ -11,3 +11,15 @@ host:
 tags:
   - wallet
   - tx
+
+questions:
+  - "¿Qué significa que dos transacciones compartan el mismo txid pero tengan diferentes wtxids? ¿Cómo es esto posible y qué implica sobre los inputs de la transacción?"
+  - "¿Por qué el wallet necesita almacenar todas las variantes de witness de una transacción? ¿Qué escenario práctico lo motiva?"
+  - "El PR introduce el concepto de una variante de witness \"canónica\". ¿Qué hace que una variante sea canónica y por qué cambia la regla según el estado de confirmación? ¿Cuáles son las ventajas y desventajas de cada regla?"
+  - "La regla de selección canónica para transacciones no confirmadas tiene en cuenta el menor peso. \"Peso\" incluye los datos de witness. ¿Porque no usamos el mayor feerate en lugar del peso? ¿Podría la variante de mayor peso tener un feerate mayor que una variante menos pesada?"
+  - "Cuando el wallet retransmite transacciones usa `GetTx()` lo cual devuelve la variante canónica. Si la tx es taproot y la variante canónica es un gasto key-path no confirmado pero en la mempool ya tiene el gasto script-path (mismo txid), ¿qué pasa? ¿Podría la retransmisión ser rechazada?"
+  - "Imagina un escenario donde una transacción tiene tres variantes de witness: A (key-path, la más ligera), B (script-path 1, mediana) y C (script-path 2, la más pesada). La variante B se confirma en un bloque. Luego el bloque es reorganizado. ¿Cuál es la variante canónica antes del reorg? ¿Y después del reorg? ¿El wallet retiene las tres variantes?"
+  - "El PR refactoriza `CWalletTx` para ser RAII. ¿Qué principio de diseño sigue esto y qué clase de bugs previene?"
+  - "El esquema de la DB almacena la variante canónica en el registro principal `tx` y todas las variantes (incluyendo la canónica) en registros `wtxvariant`. ¿Por qué no almacenar solo las variantes no canónicas en registros `wtxvariant`, evitando la redundancia?"
+  - "En `CWalletTx::RecomputeCanonical`, el lambda `is_better` compara dos variantes. El código itera con `std::next(it)` comenzando desde `m_txs.begin()`. Si `m_txs` tiene solo una entrada, el bucle nunca se ejecuta y `best_wtxid` permanece como la primera entrada. ¿Está garantizado que esto sea correcto? ¿Qué pasaría si `m_txs` está vacío, puede `RecomputeCanonical` crashear?"
+  - "En `CWalletTx::Update`, ¿por qué `RecomputeCanonical()` solo se llama cuando `!isConfirmed()`? ¿Qué saldría mal si se llamara incondicionalmente?"
