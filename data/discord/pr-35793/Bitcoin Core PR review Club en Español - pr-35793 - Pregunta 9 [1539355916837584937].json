@@ -1,0 +1,696 @@
+{
+  "guild": {
+    "id": "1483535932169781451",
+    "name": "Bitcoin Core PR review Club en Español",
+    "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+  },
+  "channel": {
+    "id": "1539355916837584937",
+    "type": "GuildPublicThread",
+    "categoryId": "1533948504840601701",
+    "category": "pr-35793",
+    "name": "Pregunta 9",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-02T19:50:06.0469177+02:00",
+  "messages": [
+    {
+      "id": "1539355916837584937",
+      "type": "Default",
+      "timestamp": "2026-08-18T21:30:50.424+02:00",
+      "timestampEdited": "2026-08-26T20:42:43.806+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 9** -> En el commit \"validation: make 64-byte transactions invalid\" se invalidan las transacciones de exactamente 64 bytes, no las de 64 o menos. ¿Por qué exactamente 64? ¿Por qué `MIN_STANDARD_TX_NONWITNESS_SIZE` se queda en 65?\n¿Aplica también al coinbase?",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541840220201156721",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:02:34.502+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "aqui la 9",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541840317798424676",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:02:57.771+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "dale a ver si alguien se anima",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541840652273328148",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:04:17.516+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Por qué distintas utxos usan tamaños distintos?",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541840817449209997",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:04:56.897+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "nope",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDD72",
+            "code": "smiling_face_with_tear",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f972.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541840870771265547",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:05:09.61+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"In computing a block's Merkle root, a transaction with exactly 64 bytes of non-witness data can be interpreted both as an intermediate node in the tree and as a leaf in the tree\" \uD83D\uDE05",
+      "author": {
+        "id": "980937364132208642",
+        "name": "santochibtc",
+        "discriminator": "0000",
+        "nickname": "Santochibtc",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fb.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            {
+              "id": "730259133240049675",
+              "name": "andreadcorreia",
+              "discriminator": "0000",
+              "nickname": "Andrea Díaz Correia",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDE05",
+          "code": "sweat_smile",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f605.svg"
+        }
+      ]
+    },
+    {
+      "id": "1541840940228944102",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:05:26.17+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "see: https://github.com/bitcoin/bips/blob/master/bip-0054.md#motivation",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "bips/bip-0054.md at master · bitcoin/bips",
+          "url": "https://github.com/bitcoin/bips/blob/master/bip-0054.md",
+          "timestamp": null,
+          "description": "Bitcoin Improvement Proposals. Contribute to bitcoin/bips development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/1qvyDhpR11J32YPdKEuN8BNFdkOuAfObC6czmF4Vmh8/https/opengraph.githubassets.com/577b3d57a8ed2bb91f10fb3af109ef88d966ff03c970454b0fe2bbacaa964752/bitcoin/bips",
+            "canonicalUrl": "https://opengraph.githubassets.com/577b3d57a8ed2bb91f10fb3af109ef88d966ff03c970454b0fe2bbacaa964752/bitcoin/bips",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541840954141442149",
+      "type": "Reply",
+      "timestamp": "2026-08-25T18:05:29.487+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "exacto",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "980937364132208642",
+          "name": "santochibtc",
+          "discriminator": "0000",
+          "nickname": "Santochibtc",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1541840870771265547",
+        "channelId": "1539355916837584937",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541840984445558804",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:05:36.712+02:00",
+      "timestampEdited": "2026-08-25T18:05:57.109+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Se invalidan las transacciones de 64 bytes ya que en los nodos intermedios del merkle tree se hashean dos txid conjuntos 32bytes+32bytes. Los nodos SPV son vulnerables a que se les engañe mandando transaciones de 64bytes y se confundan con nodos intermedios de un merkletree",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 4,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            {
+              "id": "730259133240049675",
+              "name": "andreadcorreia",
+              "discriminator": "0000",
+              "nickname": "Andrea Díaz Correia",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541841428123091015",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:07:22.493+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "aplica a coinbase tambien no?",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541841463233614005",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:07:30.864+02:00",
+      "timestampEdited": "2026-08-25T18:07:43.04+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "A la coinbase también se aplica porque se incluyen en el merkle tree ¿no?",
+      "author": {
+        "id": "980937364132208642",
+        "name": "santochibtc",
+        "discriminator": "0000",
+        "nickname": "Santochibtc",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "174230257845403648",
+              "name": ".sliv3r",
+              "discriminator": "0000",
+              "nickname": "Pol Espinasa",
+              "color": "#E67E22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541841591650623609",
+      "type": "Reply",
+      "timestamp": "2026-08-25T18:08:01.481+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "si por lo que entiendo si",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "267078046857560065",
+          "name": "roundtripoor",
+          "discriminator": "0000",
+          "nickname": ">",
+          "color": "#992D22",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1483542958153138197",
+              "name": "PR Proposer",
+              "color": "#992D22",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1541841428123091015",
+        "channelId": "1539355916837584937",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541841783473049600",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:08:47.215+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"transactions whose witness-stripped serialized size is exactly 64 bytes are invalid\"",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541841972703002714",
+      "type": "Default",
+      "timestamp": "2026-08-25T18:09:32.331+02:00",
+      "timestampEdited": "2026-08-25T18:09:48.566+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "creo que aplica a coinbase pero no puede existir una coinbase de 64bytes, porque tiene campos obligatorios como el witness commitment etc, que hacen que el tamaño sea superior",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fb.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "730259133240049675",
+              "name": "andreadcorreia",
+              "discriminator": "0000",
+              "nickname": "Andrea Díaz Correia",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 14
+}

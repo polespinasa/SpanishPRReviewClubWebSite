@@ -1,0 +1,36 @@
+# Metadatos de la sesión, junto a los exports de Discord. Sale del
+# next_session.yaml del anuncio; de aquí solo se leen author, host y tags
+# (el resto se conserva como registro del anuncio).
+
+enabled: false
+
+title: "Nuevo PR Review Club!!"
+date_display: "Martes 25 de Agosto a las 5pm CEST"
+event_url: "https://discord.com/events/1483535932169781451/1524444588754993212"
+
+host:
+  name: "Andrea Díaz Correia"
+  url: "https://x.com/AndreaDCorreia"
+
+pr:
+  name: "#35793 — Implement BIP 54 (Consensus Cleanup) without mainnet activation"
+  url: "https://github.com/bitcoin/bitcoin/pull/35793"
+
+questions:
+  - "¿Qué problema resuelve limitar los sigops legacy por transacción, si ya existe MAX_BLOCK_SIGOPS_COST? ¿Sobre qué scripts cuenta sigops CheckSigopsBIP54, y cuáles de ellos no entran en el conteo por bloque?"
+  - "En el commit \"chainparams: add versionbits deployment for BIP 54\" se añade el despliegue `versionbits`. ¿Por qué está NEVER_ACTIVE en todas las redes menos regtest? ¿Y por qué `gbt_optional_rule` es false aquí y true en testdummy?"
+  - "En el commit \"moveonly: move CheckSigopsBIP54 from policy to consensus\", `CheckSigopsBIP54` suma `scriptSig.GetSigOpCount(true)` y `scriptPubKey.GetSigOpCount(scriptSig)`. En un input P2SH el `redeemScript` va dentro del `scriptSig`: ¿se cuenta dos veces? ¿Cuántos sigops suma entonces un input P2SH-P2WPKH?"
+  - "En el commit \"validation: make BIP54 sigops check consensus-critical\", `CheckTxInputs` recibe un `bool enforce_bip54`. De sus tres llamantes fuera de los tests, dos siempre le pasan true y el tercero le pasa un valor calculado. ¿Cuál es cuál y por qué? Ese mismo commit cambia el resultado de validación de `TX_INPUTS_NOT_STANDARD` a `TX_CONSENSUS`: ¿cambia algo más que el mensaje de error que devuelve la RPC?"
+  - "En el commit \"validation: prevent timewarp attacks with a 2h grace period\", el límite de timewarp se elige con `if (enforce_BIP94) ... else if (DeploymentActiveAfter(...))`. ¿Por qué un `else if` y no aplicar los dos casos? ¿Qué documenta el `static_assert`?"
+  - "En el commit \"validation: prevent negative difficulty adjustment intervals\" se compara el bloque en `nHeight % dai == dai - 1` con el de `nHeight - dai + 1`. ¿Son esos los mismos dos bloques que usa `GetNextWorkRequired` para medir la duración del periodo? ¿Por qué no basta con el arreglo del timewarp?"
+  - "El commit \"miner: update a timewarp comment to refer specifically to BIP 54\" dice que aplicar BIP 94 en todas las redes hace más segura la activación de BIP 54, pero `GetMinimumTime()` solo contempla el primer bloque del periodo de retarget, no el último. ¿Puede entonces `getblocktemplate` fallar en un nodo honesto? ¿Y qué pasaría con `test_block_validity` desactivado?"
+  - "En el commit \"validation: enforce coinbase timelocked to block height\" se exige que el coinbase tenga `nLockTime == nHeight - 1` (además de un `nSequence` no final). ¿Por qué el - 1 y por qué hacen falta las dos condiciones? ¿Qué tiene que ver esto con BIP 30, y por qué `feature_block.py` tiene que reiniciar el nodo antes de sus tests de BIP 30?"
+  - "En el commit \"validation: make 64-byte transactions invalid\" se invalidan las transacciones de exactamente 64 bytes, no las de 64 o menos. ¿Por qué exactamente 64? ¿Por qué `MIN_STANDARD_TX_NONWITNESS_SIZE` se queda en 65?\n¿Aplica también al coinbase?"
+  - "La regla de sigops se invoca desde `ConnectBlock`, mientras que las otras cuatro reglas viven en `ContextualCheckBlockHeader` y `ContextualCheckBlock`, con un `NOTE` de que `ConnectBlock` no las invoca y de que `-reindex-chainstate` se las salta. ¿Por qué esa asimetría? ¿Qué escenario de actualización preocupa a ese comentario?"
+
+# Solo se usan una vez archivada la sesión: alimentan los filtros de la landing.
+author: darosior
+
+tags:
+  - consensus
+  - validation

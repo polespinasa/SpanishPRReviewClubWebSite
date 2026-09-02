@@ -1,0 +1,1244 @@
+{
+  "guild": {
+    "id": "1483535932169781451",
+    "name": "Bitcoin Core PR review Club en Español",
+    "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+  },
+  "channel": {
+    "id": "1539355613266444328",
+    "type": "GuildPublicThread",
+    "categoryId": "1533948504840601701",
+    "category": "pr-35793",
+    "name": "Pregunta 6",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-02T19:50:20.4839429+02:00",
+  "messages": [
+    {
+      "id": "1539355613266444328",
+      "type": "Default",
+      "timestamp": "2026-08-18T21:29:38.047+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 6** -> En el commit \"validation: prevent negative difficulty adjustment intervals\" se compara el bloque en `nHeight % dai == dai - 1` con el de `nHeight - dai + 1`. ¿Son esos los mismos dos bloques que usa `GetNextWorkRequired` para medir la duración del periodo? ¿Por qué no basta con el arreglo del timewarp?",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541833249280499853",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:34:52.505+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "aqui la 6",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541833363386532010",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:35:19.71+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDC40",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDC40",
+          "code": "eyes",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f440.svg"
+        }
+      ]
+    },
+    {
+      "id": "1541833608090751098",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:36:18.052+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "nadie?",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541833636314218506",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:36:24.781+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDC40",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDC40",
+          "code": "eyes",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f440.svg"
+        }
+      ]
+    },
+    {
+      "id": "1541833698251382874",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:36:39.548+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "no?",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541833736881184879",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:36:48.758+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Venga hago la 1a parte",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541833786101080225",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:37:00.493+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "si, son los mismos dos bloques",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834278667690056",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:38:57.93+02:00",
+      "timestampEdited": "2026-08-25T18:52:58.243+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Continúo con la segunda parte timewarp ata el primer bloque de un periodo al último del anterior, no evalúa en el mismo periodo como en esos dos bloques",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "174230257845403648",
+              "name": ".sliv3r",
+              "discriminator": "0000",
+              "nickname": "Pol Espinasa",
+              "color": "#E67E22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834306073268235",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:39:04.464+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "re: ¿Por qué no basta con el arreglo del timewarp?\n\nEl timewarp fix solo acota la relación entre el primer bloque de un periodo y el último bloque del periodo anterior. No dice nada sobre la relación entre el primer y último bloque del mismo periodo. Un atacante puede hacer que el primer bloque del periodo tenga un timestamp muy alto y el último muy bajo, produciendo un `nActualTimespan` negativo. El ataque de Zawy explota exactamente esto: manipular los timestamps dentro del periodo para hacer la duración negativa y, combinado con el clamping de la dificultad (`nActualTimespan < nPowTargetTimespan/4` se trunca al mínimo), explotar el límite de ajuste.",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fb.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834533228519505",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:39:58.622+02:00",
+      "timestampEdited": "2026-08-25T18:53:47.544+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Claro, solo con el timewarp queda un hueco para un ataque",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834677742993408",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:40:33.077+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://delvingbitcoin.org/t/zawy-s-alternating-timestamp-attack/1062",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Zawy’s Alternating Timestamp Attack",
+          "url": "https://delvingbitcoin.org/t/zawy-s-alternating-timestamp-attack/1062",
+          "timestamp": null,
+          "description": "Zawy’s alternating timestamp attack @zawy described yesterday an attack on the Testnet 4 PR. I’ll paraphrase below my understanding of the attack.  Similar to the Timewarp Attack, it requires the attacker to be able to timestamp the majority of blocks, but in contrast to the Timewarp Attack, it does not rely on the non-overlapping durations ...",
+          "color": "#111111",
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834748001779772",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:40:49.828+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "¿y esto porque no lo ha explotado ningún minero nunca si ahora puede hacerse?",
+      "author": {
+        "id": "980937364132208642",
+        "name": "santochibtc",
+        "discriminator": "0000",
+        "nickname": "Santochibtc",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834821632921640",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:41:07.383+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Por qué es difícil y requiere mucho hasrate",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "174230257845403648",
+              "name": ".sliv3r",
+              "discriminator": "0000",
+              "nickname": "Pol Espinasa",
+              "color": "#E67E22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+            },
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "730259133240049675",
+              "name": "andreadcorreia",
+              "discriminator": "0000",
+              "nickname": "Andrea Díaz Correia",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834914469777408",
+      "type": "Reply",
+      "timestamp": "2026-08-25T17:41:29.517+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "mira la testnet3 y testnet4 ahi si que esta explotado",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "980937364132208642",
+          "name": "santochibtc",
+          "discriminator": "0000",
+          "nickname": "Santochibtc",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1541834748001779772",
+        "channelId": "1539355613266444328",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834923525148763",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:41:31.676+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "La vulnerabilidad es que se pongan de auerdo los mineros",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834930839887893",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:41:33.42+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "?",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541834965606727792",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:41:41.709+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "o un minero con mucho hashrate",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fb.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541835007843377152",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:41:51.779+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "No bastaría con minar el último de un período y el primero del siguiente?",
+      "author": {
+        "id": "980937364132208642",
+        "name": "santochibtc",
+        "discriminator": "0000",
+        "nickname": "Santochibtc",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541835215113166979",
+      "type": "Reply",
+      "timestamp": "2026-08-25T17:42:41.196+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "No recuerdo donde leí pero hay un incentivo comun",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "174230257845403648",
+          "name": ".sliv3r",
+          "discriminator": "0000",
+          "nickname": "Pol Espinasa",
+          "color": "#E67E22",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1483542665147453490",
+              "name": "Administrador",
+              "color": "#E67E22",
+              "position": 2
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1541834965606727792",
+        "channelId": "1539355613266444328",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541835296960815165",
+      "type": "Reply",
+      "timestamp": "2026-08-25T17:43:00.71+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "si porque la cadena avanza mas rapido por lo que todos los mineors minan mas bloques",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fb.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "267078046857560065",
+          "name": "roundtripoor",
+          "discriminator": "0000",
+          "nickname": ">",
+          "color": "#992D22",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1483542958153138197",
+              "name": "PR Proposer",
+              "color": "#992D22",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1541835215113166979",
+        "channelId": "1539355613266444328",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541835325754572860",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:43:07.575+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "es decir, repartamosnos los coinbase de futuros  bloques ahora",
+      "author": {
+        "id": "267078046857560065",
+        "name": "roundtripoor",
+        "discriminator": "0000",
+        "nickname": ">",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541835523465936926",
+      "type": "Reply",
+      "timestamp": "2026-08-25T17:43:54.713+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "tienes que hacerlo multiples veces para que tenga efecto",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "980937364132208642",
+          "name": "santochibtc",
+          "discriminator": "0000",
+          "nickname": "Santochibtc",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1541835007843377152",
+        "channelId": "1539355613266444328",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541835730555244594",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:44:44.087+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "pasamos a la siguiente?",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541835749748383795",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:44:48.663+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Dale",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541835789347070106",
+      "type": "Default",
+      "timestamp": "2026-08-25T17:44:58.104+02:00",
+      "timestampEdited": "2026-08-25T17:45:05.889+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Lectura para cuando termine el pr review club: https://bitcoinops.org/en/topics/time-warp/",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Time warp",
+          "url": "https://bitcoinops.org/en/topics/time-warp/",
+          "timestamp": null,
+          "description": "Time warp is an exploit of Bitcoin’s difficulty adjustment algorithm that allows miners controlling a large amount of hashrate to prevent difficulty from increasing even as the rate of block production increases.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/nH7op10m3Z8eSv5Z6ImItpaqoYPdqRdGUGDAxQ2g5tE/https/bitcoinops.org/img/logos/optech-notext.png",
+            "canonicalUrl": "https://bitcoinops.org/img/logos/optech-notext.png",
+            "width": 300,
+            "height": 300
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fb.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "267078046857560065",
+              "name": "roundtripoor",
+              "discriminator": "0000",
+              "nickname": ">",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            {
+              "id": "980937364132208642",
+              "name": "santochibtc",
+              "discriminator": "0000",
+              "nickname": "Santochibtc",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/980937364132208642/b5f94427274a4e613a3a04ca8b52dc41.png?size=512"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDEE1",
+            "code": "\uD83E\uDEE1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fae1.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            {
+              "id": "730259133240049675",
+              "name": "andreadcorreia",
+              "discriminator": "0000",
+              "nickname": "Andrea Díaz Correia",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 26
+}
