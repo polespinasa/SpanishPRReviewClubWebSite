@@ -10,18 +10,26 @@
 enabled: true
 
 title: "Nuevo PR Review Club!!"
-date_display: ""        # p. ej. "Jueves 30 de Julio a las 7pm CEST"
-event_url: ""           # url del evento de Discord, opcional
+date_display: "Martes 22 de Septiembre a las 6pm CEST"
+event_url: "https://discord.com/events/1483535932169781451/1549423850301952130"
 
 host:
   name: "Kepler"
-  url: ""               # opcional, deja "" si no hay
+  url: "https://github.com/Bicaru20"
 
 pr:
   name: "#34872 — wallet: fix mixed-input transaction accounting in history RPCs"
   url: "https://github.com/bitcoin/bitcoin/pull/34872"  # https://github.com/bitcoin/bitcoin/pull/XXXXX
 
-questions: []           # lista de preguntas separadas por coma
+questions:
+  - "¿Qué problemas tiene la manera actual en que las wallet contabiliza transacciones cuyos inputs no son todos de la wallet? ¿Qué puede saber la wallet con certeza y que problemas puede te"
+  - "En el commit 3d1134d se introduce el enum WalletTxInputOwnership (NONE, PARTIAL, ALL) junto con el cache m_cached_input_ownership en CWalletTx. ¿Por qué el enum necesita tres estados en lugar de reutilizar el bool existente AllInputsMine()? ¿Por qué la clasificación se guarda y se invalida con MarkDirty()?"
+  - "En el commit 2d5e4ee se crea el struct WalletTxHistoryAccounting y la función CachedTxGetHistoryAccounting(). ¿Qué información agrupa esta función y por qué de momento la fee solo tiene valor cuando input_ownership == ALL? ¿Por qué la fee pasa a ser std::optional?"
+  - "En el commit 7eab530 se añade CWallet::MarkOutputsDirty() y se invoca al insertar una transacción nueva en AddToWallet() y LoadToWallet(). ¿Qué ayuda a solucionar esta función? (Piensa en qué pasaría si el padre de una transacción que ya está en la wallet se importa después)."
+  - "En el commit 0d3f114, en CachedTxGetAmounts(), la condición nDebit > 0 para reportar salidas como \"sent\" se sustituye por all_inputs_mine, y la fee solo se rellena si accounting.fee tiene valor. ¿Qué cambio de comportamiento introduce esto para una transacción con inputs mixtos?"
+  - "En el commit e04e090 se añade AllForeignInputsKnownZeroValue() con su cache m_cached_foreign_inputs_zero_value. ¿Qué condición exacta debe cumplir cada input que no es de la wallet para considerarse de valor cero conocido? ¿Por qué se devuelve false si el prevout apunta a una transacción que la wallet no conoce?"
+  - "En el commit 056ccd7 la condición para atribuir salidas enviadas pasa de all_inputs_mine a can_attribute_sent_outputs. ¿Qué nuevo comportamiento habilita esto para transacciones con inputs extranjeros de valor cero? ¿Por qué cuando tenemos un input extranjero de valor no cero, aunque sea conocido porque su transacción padre está en la wallet, no calculamos la fee?"
+  - "En el commit cf1b676, el test test_zero_value_wallet_input de alice construye una transacción mixta donde el input propiedad de la wallet gasta un output de valor cero, mientras que el input que no es suyo (wallet de bob) tiene un valor superior a cero y es desconocido por alice. El test verifica que la transacción se sigue reportando con la vista de transacción mixta: involves_mixed_inputs: true, entrada send agregada con wallet_debit = 0 y fee ausente. ¿Por qué la wallet trata esta transacción como mixta en lugar de tratarla como una recepción pura, dado que alice no aporta ningún valor?"
 questions_note: "Las preguntas se publicarán unos días antes de la sesión."
 
 # Solo se usan una vez archivada la sesión: alimentan los filtros de la landing.
