@@ -1,0 +1,365 @@
+{
+  "guild": {
+    "id": "1483535932169781451",
+    "name": "Bitcoin Core PR review Club en Español",
+    "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+  },
+  "channel": {
+    "id": "1549355533067096155",
+    "type": "GuildPublicThread",
+    "categoryId": "1545080132149186581",
+    "category": "pr-34872",
+    "name": "Pregunta 6",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-24T01:03:26.2610739+02:00",
+  "messages": [
+    {
+      "id": "1549355533067096155",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:45:44.717+02:00",
+      "timestampEdited": "2026-09-22T19:11:39.461+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 6** → En el septimo commit se añade `AllForeignInputsKnownZeroValue()` con su caché `m_cached_foreign_inputs_zero_value`. ¿Qué condición exacta debe cumplir cada input que no es de la wallet para considerarse de valor cero conocido? ¿Por qué se devuelve `false` si el prevout apunta a una transacción que la wallet no conoce?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551997791323291791",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:45:08.176+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Vamos con esta!",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551997850043289732",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:45:22.176+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Quien se atreve?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551998052443889779",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:46:10.432+02:00",
+      "timestampEdited": "2026-09-22T18:46:36.054+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Tres comprobaciones por cada input ajeno (`receive.cpp:63`): que el padre este en `mapWallet`, que el indice del prevout exista dentro de ese padre, y que el valor sea exactamente 0. Las dos primeras son estado de mi wallet, solo la tercera lo es de la transaccion.",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "414546370742059020",
+              "name": "leos021",
+              "discriminator": "0000",
+              "nickname": "Leo",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+            },
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551998415112638645",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:47:36.899+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Aquí, `false` significa «no podemos determinar que todos los inputs ajenos a la wallet tengan valor cero». No significa necesariamente que se haya encontrado un input con valor distinto de cero.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551998477762961451",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:47:51.836+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Devuelve `false` con el padre desconocido porque la wallet no distingue \"vale 0\" de \"no se cuanto vale\".  Y prefiere omitir info antes de darla erroena (proposito de la PR)",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "414546370742059020",
+              "name": "leos021",
+              "discriminator": "0000",
+              "nickname": "Leo (w0xlt)",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+            },
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551998581962182677",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:48:16.679+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Correcto, no tengo nada mas que añadir",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551998819716309003",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:49:13.364+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Pues vamos con la septima pregunta!",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 8
+}
