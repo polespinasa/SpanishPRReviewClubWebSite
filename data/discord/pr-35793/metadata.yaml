@@ -10,7 +10,7 @@ event_url: "https://discord.com/events/1483535932169781451/1524444588754993212"
 
 host:
   name: "Andrea Díaz Correia"
-  url: "https://x.com/AndreaDCorreia"
+  url: "https://github.com/andreadiazcorreia"
 
 pr:
   name: "#35793 — Implement BIP 54 (Consensus Cleanup) without mainnet activation"
