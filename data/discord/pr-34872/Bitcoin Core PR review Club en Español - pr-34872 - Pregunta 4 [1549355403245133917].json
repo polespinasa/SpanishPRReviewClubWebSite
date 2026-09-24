@@ -1,0 +1,1241 @@
+{
+  "guild": {
+    "id": "1483535932169781451",
+    "name": "Bitcoin Core PR review Club en Español",
+    "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+  },
+  "channel": {
+    "id": "1549355403245133917",
+    "type": "GuildPublicThread",
+    "categoryId": "1545080132149186581",
+    "category": "pr-34872",
+    "name": "Pregunta 4",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-24T01:03:15.0129645+02:00",
+  "messages": [
+    {
+      "id": "1549355403245133917",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:45:13.765+02:00",
+      "timestampEdited": "2026-09-22T19:10:54.108+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 4** → En el tercer commit se añade `CWallet::MarkOutputsDirty()` y se invoca al insertar una transacción nueva en `AddToWallet()` y `LoadToWallet()`. ¿Qué ayuda a solucionar esta función? (Piensa en qué pasaría si el padre de una transacción que ya está en la wallet se importa después).",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551993218831224893",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:26:58.009+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Quien quiere esta? Esta muy relacionada con la 2, casi casi ya la hemos resuleto alli",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551993290084057144",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:27:14.997+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDC40",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDC40",
+          "code": "eyes",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f440.svg"
+        }
+      ]
+    },
+    {
+      "id": "1551993603121741865",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:28:29.631+02:00",
+      "timestampEdited": "2026-09-22T18:29:07.187+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Teniendo en cuenta que antes se ha dicho que MarkDirty() invalida un resultado porque puede haber cambiado,  imagino que si conoces un padre de la tx podria ser que el output gastado fuera tuyo y pensaras que no",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551993634163790016",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:28:37.032+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "(suposiciones sin haber revisado el PR ni leido el codigo)",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551993788786806906",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:29:13.897+02:00",
+      "timestampEdited": "2026-09-22T18:29:29.33+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Cuando importamos mas tarde una tx, `MarkOutputsDIrty` recorre los outputs de la nueva tx y marca dirty las que los gastan.",
+      "author": {
+        "id": "1471624026194706523",
+        "name": "nebula21m_32989",
+        "discriminator": "0000",
+        "nickname": "nebula",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1471624026194706523/5e144945c0a44694fb75d92c279dcda1.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551993816364482643",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:29:20.472+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "una tx puede pasar que esta pase de estado  `PARTIAL` a `ALL` si llega un nuevo utxo a la wallet",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551993877194608664",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:29:34.975+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "creo que el test `wallet_gettransaction_mixed_inputs.py:141` cubre este escenario \uD83E\uDD13",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "414546370742059020",
+              "name": "leos021",
+              "discriminator": "0000",
+              "nickname": "Leo",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83E\uDD13",
+          "code": "nerd",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f913.svg"
+        }
+      ]
+    },
+    {
+      "id": "1551994034086613085",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:30:12.381+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Muy bien, no tengo nada que añadir aqui lo habeis explicado todo!",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDD25",
+            "code": "fire",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551994101145272440",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:30:28.369+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Exato.  Evita que la información calculada previamente sobre la transacción hija quede desactualizada.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551994121831317555",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:30:33.301+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Imagina que la wallet ya conoce la transacción `C`, que gasta una salida de la transacción `P`, pero todavía no tiene `P`. La wallet podría almacenar en caché que no puede reconocer ese input como propio ni verificar si su valor es cero.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551994132275396669",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:30:35.791+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Más adelante, se importa `P`. La wallet ahora dispone de información que podría cambiar la contabilidad de `C`. Limitarse a añadir `P` dejaría intactos los resultados de `C` almacenados en caché.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            },
+            {
+              "id": "1471624026194706523",
+              "name": "nebula21m_32989",
+              "discriminator": "0000",
+              "nickname": "nebula",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1471624026194706523/5e144945c0a44694fb75d92c279dcda1.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551994369081348230",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:31:32.25+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "en que situacion podriamos conocer el hijo pero no el padre?",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551994654931689484",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:32:40.402+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "importa un descriptor nuevo a la wallwt",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551994792458588220",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:33:13.191+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "o alguna condicion de carrera, not sure como se guardan los utxos en wallet",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551994827434889239",
+      "type": "Reply",
+      "timestamp": "2026-09-22T18:33:21.53+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "porque deberia esto darte un hijo sin un padre?",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "342759576338300928",
+          "name": "siegfried27",
+          "discriminator": "0000",
+          "nickname": "arejula27",
+          "color": "#992D22",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1483542958153138197",
+              "name": "PR Proposer",
+              "color": "#992D22",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1551994654931689484",
+        "channelId": "1549355403245133917",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551994987053449277",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:33:59.586+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "tienes la tx hija que estas gastando (toda firmada) y por alguna razon uno de los inputs es de tu cartera A que se te ocurre importarla",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "414546370742059020",
+              "name": "leos021",
+              "discriminator": "0000",
+              "nickname": "Leo (w0xlt)",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+            },
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551995088497025094",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:34:23.772+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "pero idk es un caso que no le veo sentido pero teoricamente pasa",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551995134759931989",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:34:34.802+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Puedes recibir primero la transacción hija en el mempool.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551995239529709611",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:34:59.781+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "eso tiene mas sentido, pero no la rechazas al faltar un input?",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551995330847838340",
+      "type": "Reply",
+      "timestamp": "2026-09-22T18:35:21.553+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "la mandas al orfanato si es asi, no creo que la wallet conozca transacciones del orfanato",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "414546370742059020",
+          "name": "leos021",
+          "discriminator": "0000",
+          "nickname": "Leo (w0xlt)",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1551995134759931989",
+        "channelId": "1549355403245133917",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551995495176605877",
+      "type": "Reply",
+      "timestamp": "2026-09-22T18:36:00.732+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "vale, caso raro pero si, ahi podria ser, si son inputs de dos wallets tuyas, e importas el descriptor de una de ellas en la otra a posteriori",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "342759576338300928",
+          "name": "siegfried27",
+          "discriminator": "0000",
+          "nickname": "arejula27",
+          "color": "#992D22",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1483542958153138197",
+              "name": "PR Proposer",
+              "color": "#992D22",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1551994987053449277",
+        "channelId": "1549355403245133917",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551995501744758907",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:36:02.298+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "tiene sentido",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551995941593030840",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:37:47.166+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Pues seguimos con la siguiente!",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551996114746478623",
+      "type": "Reply",
+      "timestamp": "2026-09-22T18:38:28.449+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "El padre  involucra a otras personas, pero el niño te involucra.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "174230257845403648",
+          "name": ".sliv3r",
+          "discriminator": "0000",
+          "nickname": "Pol Espinasa",
+          "color": "#E67E22",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1483542665147453490",
+              "name": "Administrador",
+              "color": "#E67E22",
+              "position": 2
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1551995330847838340",
+        "channelId": "1549355403245133917",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551996212700250296",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:38:51.803+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "No estoy seguro de que la traducción anterior sea correcta.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551996296099799242",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:39:11.687+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "creo que no",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551996347287085057",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:39:23.891+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "puedes escribir en ingle si quieres y yo lo traduzco",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551996744827674707",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:40:58.672+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Imagina la wallet de Alice:\n\nTransacción padre `P`: Carol le paga a Bob.\nTransacción hija `C`: Bob gasta ese output para pagarle a Alice.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551996763760500958",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:41:03.186+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "La wallet de Alice guarda `C` porque le paga a ella. No tiene ningún motivo para guardar `P`, ya que esa transacción solo involucraba a Carol y Bob.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551996769414545439",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:41:04.534+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Lo mismo ocurre en un Payjoin: Alice puede conocer la transacción padre que financia su propio input, pero no la transacción padre que financia el input de Bob. Aun así, guarda la transacción hija colaborativa.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551997206792507463",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:42:48.813+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "claro pero si el input es de Bob, nunca va a canviar el estado a `ALL` porque es un input de Bob",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 32
+}

@@ -1,0 +1,307 @@
+{
+  "guild": {
+    "id": "1483535932169781451",
+    "name": "Bitcoin Core PR review Club en Español",
+    "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+  },
+  "channel": {
+    "id": "1549355721584541697",
+    "type": "GuildPublicThread",
+    "categoryId": "1545080132149186581",
+    "category": "pr-34872",
+    "name": "Pregunta 7",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-24T01:03:29.8842662+02:00",
+  "messages": [
+    {
+      "id": "1549355721584541697",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:46:29.663+02:00",
+      "timestampEdited": "2026-09-22T19:12:03.348+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 7** → En el octavo commit, la condición para atribuir salidas enviadas pasa de `all_inputs_mine` a `can_attribute_sent_outputs`. ¿Qué nuevo comportamiento habilita esto para transacciones con inputs extranjeros de valor cero? ¿Por qué, cuando tenemos un input extranjero de valor distinto de cero, aunque sea conocido porque su transacción padre está en la wallet, no calculamos la fee?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551999067624575037",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:50:12.47+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Vamos con la penultima pregunta!",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551999544118480967",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:52:06.075+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Venga que ya queda poco, quien se anima?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551999666281906237",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:52:35.201+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Habilita volver a dar la fee cuando hay inputs externos que no aportan valor, por ejemplo un ancla P2A. Al valer 0 el input ajeno, todo el valor de los inputs lo puso la wallet, asi que `debit == Σ(inputs)` vuelve a ser cierto y la formula de la fee funciona.",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "414546370742059020",
+              "name": "leos021",
+              "discriminator": "0000",
+              "nickname": "Leo",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+            },
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551999798251622521",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:53:06.665+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Si se sabe que todos los inputs ajenos a la wallet tienen valor cero, entonces todo el dinero de la transacción provino de tu wallet. `can_attribute_sent_outputs` permite generar las entradas de envío habituales por output e informar de la comisión.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551999822540574812",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:53:12.456+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Si un input ajeno a la wallet aporta fondos, conocer la comisión total de la transacción no permite determinar qué parte pagó tu wallet. Por eso, el RPC omite la parte de la comisión atribuible a la wallet en lugar de estimarla.",
+      "author": {
+        "id": "414546370742059020",
+        "name": "leos021",
+        "discriminator": "0000",
+        "nickname": "Leo (w0xlt)",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDCAF",
+            "code": "100",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4af.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1552000147498602507",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:54:29.932+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Correcto! Vamos con la ultima!",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 7
+}

@@ -1,0 +1,744 @@
+{
+  "guild": {
+    "id": "1483535932169781451",
+    "name": "Bitcoin Core PR review Club en Español",
+    "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+  },
+  "channel": {
+    "id": "1545080132149186581",
+    "type": "GuildTextChat",
+    "categoryId": "1483538139116212314",
+    "category": "Pull Request Reviews Activas \uD83E\uDDD0",
+    "name": "pr-34872",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-24T01:03:43.7455325+02:00",
+  "messages": [
+    {
+      "id": "1545102055574605844",
+      "type": "Default",
+      "timestamp": "2026-09-03T18:03:56.657+02:00",
+      "timestampEdited": "2026-09-03T18:04:39.238+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "# Revisamos PR #35793\n\n\nwallet: fix mixed-input transaction accounting in history RPCs\nLink: https://github.com/bitcoin/bitcoin/pull/34872",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "wallet: fix mixed-input transaction accounting in history RPCs by w...",
+          "url": "https://github.com/bitcoin/bitcoin/pull/34872",
+          "timestamp": null,
+          "description": "When a wallet owns only some inputs of a transaction, such as in CoinJoins, payjoins, or other collaborative transactions, wallet history RPCs currently apply normal send accounting.\nThat works whe...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/P6HKXDLPO7ZjwJxudun7z7lgRBjPD-UN8LRaR4IiZik/https/opengraph.githubassets.com/c15baddd5320075f4fe6a441d67010421cb3a3174879d55541f9406d4439962a/bitcoin/bitcoin/pull/34872",
+            "canonicalUrl": "https://opengraph.githubassets.com/c15baddd5320075f4fe6a441d67010421cb3a3174879d55541f9406d4439962a/bitcoin/bitcoin/pull/34872",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDEE1",
+            "code": "\uD83E\uDEE1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fae1.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            {
+              "id": "435613945730957322",
+              "name": "dulce_villarreal",
+              "discriminator": "0000",
+              "nickname": "Dulce - be aware of scams-",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/435613945730957322/af09448ff22852f4a5aa8124bfe8b847.png?size=512"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDD25",
+            "code": "fire",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "435613945730957322",
+              "name": "dulce_villarreal",
+              "discriminator": "0000",
+              "nickname": "Dulce - be aware of scams-",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/435613945730957322/af09448ff22852f4a5aa8124bfe8b847.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1549355244217958502",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:44:35.85+02:00",
+      "timestampEdited": "2026-09-15T18:11:26.748+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 1** → ¿Qué problemas tiene la manera actual en que las wallets contabilizan transacciones cuyos inputs no son todos de la wallet? ¿Qué puede saber la wallet con certeza y qué problemas puede tener al calcular la fee?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDD25",
+            "code": "fire",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "435613945730957322",
+              "name": "dulce_villarreal",
+              "discriminator": "0000",
+              "nickname": "Dulce - be aware of scams-",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/435613945730957322/af09448ff22852f4a5aa8124bfe8b847.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1549355271548313723",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:44:42.366+02:00",
+      "timestampEdited": "2026-09-22T19:10:21.66+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 2** → En el primer commit  se introduce el enum `WalletTxInputOwnership` (`NONE`, `PARTIAL`, `ALL`) junto con el caché `m_cached_input_ownership` en `CWalletTx`. ¿Por qué el enum necesita tres estados en lugar de reutilizar el `bool` existente `AllInputsMine()`? ¿Por qué la clasificación se guarda en caché y se invalida con `MarkDirty()`?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1549355344256303107",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:44:59.701+02:00",
+      "timestampEdited": "2026-09-22T19:10:34.532+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 3** → En el segundo commit  se crea el struct `WalletTxHistoryAccounting` y la función `CachedTxGetHistoryAccounting()`. ¿Qué información agrupa esta función y por qué, de momento, la fee solo tiene valor cuando `input_ownership == ALL`? ¿Por qué la fee pasa a ser `std::optional`?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1549355403245133917",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:45:13.765+02:00",
+      "timestampEdited": "2026-09-22T19:10:54.108+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 4** → En el tercer commit se añade `CWallet::MarkOutputsDirty()` y se invoca al insertar una transacción nueva en `AddToWallet()` y `LoadToWallet()`. ¿Qué ayuda a solucionar esta función? (Piensa en qué pasaría si el padre de una transacción que ya está en la wallet se importa después).",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1549355495339462727",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:45:35.722+02:00",
+      "timestampEdited": "2026-09-22T19:11:21.87+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 5** → En el quinto commit, en `CachedTxGetAmounts()`, la condición `nDebit > 0` para reportar salidas como \"sent\" se sustituye por `all_inputs_mine`, y la fee solo se rellena si `accounting.fee` tiene valor. ¿Qué cambio de comportamiento introduce esto para una transacción con inputs mixtos?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1549355533067096155",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:45:44.717+02:00",
+      "timestampEdited": "2026-09-22T19:11:39.461+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 6** → En el septimo commit se añade `AllForeignInputsKnownZeroValue()` con su caché `m_cached_foreign_inputs_zero_value`. ¿Qué condición exacta debe cumplir cada input que no es de la wallet para considerarse de valor cero conocido? ¿Por qué se devuelve `false` si el prevout apunta a una transacción que la wallet no conoce?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1549355721584541697",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:46:29.663+02:00",
+      "timestampEdited": "2026-09-22T19:12:03.348+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 7** → En el octavo commit, la condición para atribuir salidas enviadas pasa de `all_inputs_mine` a `can_attribute_sent_outputs`. ¿Qué nuevo comportamiento habilita esto para transacciones con inputs extranjeros de valor cero? ¿Por qué, cuando tenemos un input extranjero de valor distinto de cero, aunque sea conocido porque su transacción padre está en la wallet, no calculamos la fee?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1549355784679456789",
+      "type": "Default",
+      "timestamp": "2026-09-15T11:46:44.706+02:00",
+      "timestampEdited": "2026-09-22T19:12:36.491+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**Pregunta 8** → En el decimo segundo commit, el test `test_zero_value_wallet_input` de Alice construye una transacción mixta en la que el input propiedad de la wallet gasta un output de valor cero, mientras que el input que no es suyo (de la wallet de Bob) tiene un valor superior a cero y es desconocido por Alice. El test verifica que la transacción sigue reportándose con la vista de transacción mixta: `involves_mixed_inputs: true`, una entrada `send` agregada con `wallet_debit = 0` y la fee ausente. ¿Por qué la wallet trata esta transacción como mixta en lugar de tratarla como una recepción pura, dado que Alice no aporta ningún valor?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986544393588890",
+      "type": "ThreadCreated",
+      "timestamp": "2026-09-22T18:00:26.699+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1545102055574605844",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551987782803529781",
+      "type": "ThreadCreated",
+      "timestamp": "2026-09-22T18:05:21.959+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1549355244217958502",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551989434533019741",
+      "type": "ThreadCreated",
+      "timestamp": "2026-09-22T18:11:55.762+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1549355271548313723",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551991482339041347",
+      "type": "ThreadCreated",
+      "timestamp": "2026-09-22T18:20:03.997+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1549355344256303107",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551993211520680004",
+      "type": "ThreadCreated",
+      "timestamp": "2026-09-22T18:26:56.266+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1549355403245133917",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551996136431161371",
+      "type": "ThreadCreated",
+      "timestamp": "2026-09-22T18:38:33.619+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1549355495339462727",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551997785698476109",
+      "type": "ThreadCreated",
+      "timestamp": "2026-09-22T18:45:06.835+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1549355533067096155",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551999061391970341",
+      "type": "ThreadCreated",
+      "timestamp": "2026-09-22T18:50:10.984+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1549355721584541697",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1552000346610475061",
+      "type": "ThreadCreated",
+      "timestamp": "2026-09-22T18:55:17.404+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1549355784679456789",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 18
+}

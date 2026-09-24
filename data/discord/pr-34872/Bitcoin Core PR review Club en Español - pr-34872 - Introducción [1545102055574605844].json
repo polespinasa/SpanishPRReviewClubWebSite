@@ -1,0 +1,819 @@
+{
+  "guild": {
+    "id": "1483535932169781451",
+    "name": "Bitcoin Core PR review Club en Español",
+    "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+  },
+  "channel": {
+    "id": "1545102055574605844",
+    "type": "GuildPublicThread",
+    "categoryId": "1545080132149186581",
+    "category": "pr-34872",
+    "name": "Introducción",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-24T01:02:45.9820956+02:00",
+  "messages": [
+    {
+      "id": "1545102055574605844",
+      "type": "Default",
+      "timestamp": "2026-09-03T18:03:56.657+02:00",
+      "timestampEdited": "2026-09-03T18:04:39.238+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "# Revisamos PR #35793\n\n\nwallet: fix mixed-input transaction accounting in history RPCs\nLink: https://github.com/bitcoin/bitcoin/pull/34872",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "wallet: fix mixed-input transaction accounting in history RPCs by w...",
+          "url": "https://github.com/bitcoin/bitcoin/pull/34872",
+          "timestamp": null,
+          "description": "When a wallet owns only some inputs of a transaction, such as in CoinJoins, payjoins, or other collaborative transactions, wallet history RPCs currently apply normal send accounting.\nThat works whe...",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/P6HKXDLPO7ZjwJxudun7z7lgRBjPD-UN8LRaR4IiZik/https/opengraph.githubassets.com/c15baddd5320075f4fe6a441d67010421cb3a3174879d55541f9406d4439962a/bitcoin/bitcoin/pull/34872",
+            "canonicalUrl": "https://opengraph.githubassets.com/c15baddd5320075f4fe6a441d67010421cb3a3174879d55541f9406d4439962a/bitcoin/bitcoin/pull/34872",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDEE1",
+            "code": "\uD83E\uDEE1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fae1.svg"
+          },
+          "count": 2,
+          "users": []
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDD25",
+            "code": "fire",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg"
+          },
+          "count": 1,
+          "users": []
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986558410825869",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:00:30.041+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hola, buenas a todos!",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4B",
+            "code": "wave",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44b.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1471624026194706523",
+              "name": "nebula21m_32989",
+              "discriminator": "0000",
+              "nickname": "nebula",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1471624026194706523/5e144945c0a44694fb75d92c279dcda1.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986605118464010",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:00:41.177+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "buenassssss",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986637704270016",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:00:48.946+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Holaaa",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986686400135351",
+      "type": "ChannelNameChange",
+      "timestamp": "2026-09-22T18:01:00.556+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Changed the channel name: Introducción",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986687205310506",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:01:00.748+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "bueenas",
+      "author": {
+        "id": "1471624026194706523",
+        "name": "nebula21m_32989",
+        "discriminator": "0000",
+        "nickname": "nebula",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1471624026194706523/5e144945c0a44694fb75d92c279dcda1.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986717291192405",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:01:07.921+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "puede ser la pr que mas me ha costado entender que intentaba cambiar\uD83D\uDE05",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDE05",
+          "code": "sweat_smile",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f605.svg"
+        }
+      ]
+    },
+    {
+      "id": "1551986801382785086",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:01:27.97+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "yo no he tenido mucho tiempo a revisar esta, pero estaba echandole un ojo ahora y telita",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986819535478825",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:01:32.298+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Dejo 2 min y empezamos!",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986846500659221",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:01:38.727+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "dale",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986905485156365",
+      "type": "Reply",
+      "timestamp": "2026-09-22T18:01:52.79+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Cuando lo seleccione pensaba que era mas facil",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDD23",
+            "code": "rofl",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f923.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "174230257845403648",
+              "name": ".sliv3r",
+              "discriminator": "0000",
+              "nickname": "Pol Espinasa",
+              "color": "#E67E22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+            },
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "342759576338300928",
+          "name": "siegfried27",
+          "discriminator": "0000",
+          "nickname": "arejula27",
+          "color": "#992D22",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1483542958153138197",
+              "name": "PR Proposer",
+              "color": "#992D22",
+              "position": 1
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1551986717291192405",
+        "channelId": "1545102055574605844",
+        "guildId": "1483535932169781451"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551986972652871751",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:02:08.804+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Entre todos seguro que lo podemos entender jeje",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551987048775422124",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:02:26.953+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "mejor mejor, si aun y eso habeis podido responder todo es buena señal, trabajo bien hecho \uD83D\uDE1B",
+      "author": {
+        "id": "174230257845403648",
+        "name": ".sliv3r",
+        "discriminator": "0000",
+        "nickname": "Pol Espinasa",
+        "color": "#E67E22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542665147453490",
+            "name": "Administrador",
+            "color": "#E67E22",
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/174230257845403648/e885d218ab790b012ea4fdd4ec5309fc.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDE1B",
+          "code": "stuck_out_tongue",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f61b.svg"
+        }
+      ]
+    },
+    {
+      "id": "1551987141054046263",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:02:48.954+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "he comparado como hacen lo mismo otras 10 wallets, cada una lo hace de una forma distinta xdddd",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551987239095902229",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:03:12.329+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Os han ayudado las preguntas a entender el pr?",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551987302710911180",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:03:27.496+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "la  1 y 2 sobre todo, las otras eran mas de codigo y ya estaba entendido",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551987332536729701",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:03:34.607+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "pero si, mucho la vrd",
+      "author": {
+        "id": "342759576338300928",
+        "name": "siegfried27",
+        "discriminator": "0000",
+        "nickname": "arejula27",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "❤️",
+            "code": "heart",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2764.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551987377822503005",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:03:45.404+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "buenas!",
+      "author": {
+        "id": "730259133240049675",
+        "name": "andreadcorreia",
+        "discriminator": "0000",
+        "nickname": "Andrea Díaz Correia",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/730259133240049675/dff04a584f5e8dca1460f34405d25adb.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4B",
+            "code": "wave",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44b.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "342759576338300928",
+              "name": "siegfried27",
+              "discriminator": "0000",
+              "nickname": "arejula27",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            {
+              "id": "433663137951252480",
+              "name": "kepler_03j09",
+              "discriminator": "0000",
+              "nickname": "Kepler",
+              "color": "#992D22",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            },
+            {
+              "id": "1471624026194706523",
+              "name": "nebula21m_32989",
+              "discriminator": "0000",
+              "nickname": "nebula",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/1471624026194706523/5e144945c0a44694fb75d92c279dcda1.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1551987609490690259",
+      "type": "Default",
+      "timestamp": "2026-09-22T18:04:40.638+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Pues empezamos!",
+      "author": {
+        "id": "433663137951252480",
+        "name": "kepler_03j09",
+        "discriminator": "0000",
+        "nickname": "Kepler",
+        "color": "#992D22",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1483542958153138197",
+            "name": "PR Proposer",
+            "color": "#992D22",
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 19
+}
