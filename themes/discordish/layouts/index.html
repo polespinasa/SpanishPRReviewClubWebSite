@@ -79,7 +79,8 @@
         {{ if .questions }}
           <p class="next-session-questions-label">Preguntas</p>
           <ol class="next-session-questions">
-            {{ range .questions }}<li>{{ . }}</li>{{ end }}
+            {{/* Questions are Markdown (inline code, links). */}}
+            {{ range .questions }}<li>{{ . | markdownify }}</li>{{ end }}
           </ol>
         {{ else }}
           {{ with .questions_note }}<p class="next-session-note">{{ . }}</p>{{ end }}
