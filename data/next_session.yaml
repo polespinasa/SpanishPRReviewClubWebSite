@@ -1,0 +1,39 @@
+# Plantilla de una sesión nueva.
+#
+#   cp data/pr_template.yml data/next_session.yaml
+#
+# cuando ya ha pasado y se archiva la sesion exportando los chats y moviendo este archivo
+# como metadata.yaml a la carpeta data/discord/pr-XXXXX/metadata.yaml
+#
+# Ver "Anunciar la próxima sesión" y "Cerrar una sesión y archivarla" en el README.
+
+enabled: true
+
+title: "Nuevo PR Review Club!!"
+date_display: ""        # p. ej. "Jueves 30 de Julio a las 7pm CEST"
+event_url: ""           # url del evento de Discord, opcional
+
+host:
+  name: "Íñigo Aréjula"
+  url: "https://github.com/arejula27"
+
+pr:
+  name: "#36002 — txindex: allow running in pruned mode"
+  url: "https://github.com/bitcoin/bitcoin/pull/36002"
+
+questions:
+  - "Antes de [#35531](https://github.com/bitcoin/bitcoin/pull/35531), ¿qué guardaba cada entrada del txindex como clave y como valor? ¿Y después? ¿Por qué ese cambio es lo que permite tener un txindex en un nodo podado?"
+  - "Con esta PR el nodo poda los bloques pero el índice no se poda: sigue creciendo (~2,5 GB/año) y apunta a datos que ya no están en disco. ¿Qué aporta un índice así? ¿Para qué usuarios tiene sentido, frente a no tener txindex o tener un nodo completo?"
+  - "¿Por qué `-txindex` y `-prune` eran incompatibles? En `txindex: allow prune mode when there are no legacy entries`, ¿por qué la comprobación pasa de `AppInitParameterInteraction` a `AppInitMain`, y por qué se rechaza la poda si quedan entradas legacy?"
+  - "En el mismo commit hay dos mensajes de error según `m_have_pruned`. ¿Por qué no basta con \"borra el directorio\" en los dos casos?"
+  - "En `txindex: return pruned block hashes from FindTx`, ¿por qué `FindTx` solo devuelve el hash de un bloque podado si ese bloque está en la cadena activa? ¿Y por qué devuelve un vector de hashes y no uno solo?"
+  - "En `rpc: report pruned blocks from GetTransaction`, `getrawtransaction` con verbosity 2 pasa de comprobar `BLOCK_HAVE_MASK` a `BLOCK_HAVE_UNDO`. ¿Qué escenario nuevo lo hace necesario?"
+  - "Si la tx está en un bloque podado, ¿qué recibe el usuario (código, mensaje, `error.data`) frente a una tx que no existe? ¿Qué hace después, y por qué el bloque descargado no se vuelve a borrar enseguida?"
+  - "Mientras el txindex se sincroniza en un nodo con `-prune`, ¿qué impide que el nodo pode bloques que el índice aún no ha procesado? ¿Qué pasaría si eso ocurriera?"
+  - "Leed la discusión de la PR: las propuestas de ajtowns (`-prunetxindex`) y mzumsande (índice parcial que borre entradas viejas), y la petición de fjahr de sacar el historial parcial a otra PR. ¿Os resultaría útil un txindex que solo cubre parte de la cadena? ¿En qué casos lo usaríais y qué os falta del diseño actual?"
+  - "Si el historial parcial se generalizara a `BaseIndex`, ¿qué otros índices podrían empezar a mitad de la cadena y cuáles no? Pensad en `blockfilterindex`, `coinstatsindex` y `txospenderindex`."
+questions_note: "Las preguntas se publicarán unos días antes de la sesión."
+
+# Solo se usan una vez archivada la sesión: alimentan los filtros de la landing.
+author: "andrewtoth"    # usuario de GitHub que abrió la PR
+tags: [indices, rpc]    # p. ej. [wallet, mempool, p2p]
