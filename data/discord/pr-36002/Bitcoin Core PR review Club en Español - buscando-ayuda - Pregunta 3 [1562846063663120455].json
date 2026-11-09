@@ -1,0 +1,427 @@
+{
+    "guild": {
+        "id": "1483535932169781451",
+        "name": "Bitcoin Core PR review Club en Español",
+        "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+    },
+    "channel": {
+        "id": "1562846063663120455",
+        "type": "GuildPublicThread",
+        "categoryId": "1483535932954251462",
+        "category": "pr-36002",
+        "name": "Pregunta 3",
+        "topic": null
+    },
+    "dateRange": {
+        "after": null,
+        "before": null
+    },
+    "exportedAt": "2026-11-09T01:02:03.5094968+01:00",
+    "messages": [
+        {
+            "id": "1562846063663120455",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:12:17.853+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "Pregunta 3 -> ¿Por qué -txindex y -prune eran incompatibles? En txindex: allow prune mode when there are no legacy entries, ¿por qué la comprobación pasa de AppInitParameterInteraction a AppInitMain, y por qué se rechaza la poda si quedan entradas legacy?",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562846115219378309",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:12:30.145+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "seguimos?",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562846380853039146",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:13:33.477+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "Eran incompatibles porque txindex apuntaba a una ubicación en el disco y -prune elimina bloques de vez en cuando. \n\nLa comprobación ahora pasa de `AppInitParameterInteraction` a `AppInitMain` porque la compatibilidad ya no depende de los argumentos, sino de si la db tiene entradas legacy. Si tiene entradas legacy, se rechaza el modo `-prune` porque esas apuntan todavía a una ubicación en el disco en vez del block number.",
+            "author": {
+                "id": "267078046857560065",
+                "name": "roundtripoor",
+                "discriminator": "0000",
+                "nickname": ">",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [
+                {
+                    "emoji": {
+                        "id": "",
+                        "name": "👍",
+                        "code": "thumbsup",
+                        "isAnimated": false,
+                        "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+                    },
+                    "count": 2,
+                    "users": [
+                        {
+                            "id": "342759576338300928",
+                            "name": "siegfried27",
+                            "discriminator": "0000",
+                            "nickname": "arejula27",
+                            "color": "#992D22",
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+                        },
+                        {
+                            "id": "688930139534655556",
+                            "name": "nacho_porte",
+                            "discriminator": "0000",
+                            "nickname": "nacho_porte",
+                            "color": null,
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+                        }
+                    ]
+                }
+            ],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562846431331618837",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:13:45.512+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "Pq -txindex dependía de que los archivos de los bloques estuviesen en disco y -prune no mantiene el historial completo de bloques.",
+            "author": {
+                "id": "688930139534655556",
+                "name": "nacho_porte",
+                "discriminator": "0000",
+                "nickname": "nacho_porte",
+                "color": null,
+                "isBot": false,
+                "roles": [],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [
+                {
+                    "emoji": {
+                        "id": "",
+                        "name": "👍",
+                        "code": "thumbsup",
+                        "isAnimated": false,
+                        "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+                    },
+                    "count": 1,
+                    "users": [
+                        {
+                            "id": "342759576338300928",
+                            "name": "siegfried27",
+                            "discriminator": "0000",
+                            "nickname": "arejula27",
+                            "color": "#992D22",
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+                        }
+                    ]
+                }
+            ],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562846897331507253",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:15:36.615+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "algo mas? (me he colado el comentario era para la 5)",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562846913944879195",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:15:40.576+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "o seguimos?",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562846980902887616",
+            "type": "Reply",
+            "timestamp": "2026-10-22T17:15:56.54+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "nos has hecho un pequeño spoiler",
+            "author": {
+                "id": "433663137951252480",
+                "name": "kepler_03j09",
+                "discriminator": "0000",
+                "nickname": "Kepler",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [
+                {
+                    "emoji": {
+                        "id": "",
+                        "name": "🤫",
+                        "code": "shushing_face",
+                        "isAnimated": false,
+                        "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f92b.svg"
+                    },
+                    "count": 1,
+                    "users": [
+                        {
+                            "id": "688930139534655556",
+                            "name": "nacho_porte",
+                            "discriminator": "0000",
+                            "nickname": "nacho_porte",
+                            "color": null,
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+                        }
+                    ]
+                }
+            ],
+            "mentions": [
+                {
+                    "id": "342759576338300928",
+                    "name": "siegfried27",
+                    "discriminator": "0000",
+                    "nickname": "arejula27",
+                    "color": "#992D22",
+                    "isBot": false,
+                    "roles": [
+                        {
+                            "id": "1483542958153138197",
+                            "name": "PR Proposer",
+                            "color": "#992D22",
+                            "position": 1
+                        }
+                    ],
+                    "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+                }
+            ],
+            "reference": {
+                "type": "Default",
+                "messageId": "1562846897331507253",
+                "channelId": "1562846063663120455",
+                "guildId": "1483535932169781451"
+            },
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562847030076903535",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:16:08.264+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "sip hahah mb",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562847109902762107",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:16:27.296+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "En realidad, el problema era que no teníamos el hash del bloque. Solo podíamos obtenerlo leyendo la cabecera del bloque desde el archivo.",
+            "author": {
+                "id": "763471941452431451",
+                "name": "andrewtoth.",
+                "discriminator": "0000",
+                "nickname": "andrewtoth",
+                "color": null,
+                "isBot": false,
+                "roles": [],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/763471941452431451/4abd8c428fd80817cf2f88438586ce70.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [
+                {
+                    "emoji": {
+                        "id": "",
+                        "name": "👍🏻",
+                        "code": "thumbsup_tone1",
+                        "isAnimated": false,
+                        "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d-1f3fb.svg"
+                    },
+                    "count": 2,
+                    "users": [
+                        {
+                            "id": "267078046857560065",
+                            "name": "roundtripoor",
+                            "discriminator": "0000",
+                            "nickname": ">",
+                            "color": "#992D22",
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+                        },
+                        {
+                            "id": "342759576338300928",
+                            "name": "siegfried27",
+                            "discriminator": "0000",
+                            "nickname": "arejula27",
+                            "color": "#992D22",
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+                        }
+                    ]
+                }
+            ],
+            "mentions": [],
+            "inlineEmojis": []
+        }
+    ],
+    "messageCount": 9
+}

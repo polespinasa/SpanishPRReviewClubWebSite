@@ -1,0 +1,351 @@
+{
+    "guild": {
+        "id": "1483535932169781451",
+        "name": "Bitcoin Core PR review Club en Español",
+        "iconUrl": "https://cdn.discordapp.com/icons/1483535932169781451/3ecdd8e0476a7705a614bd134e4cfd05.png?size=512"
+    },
+    "channel": {
+        "id": "1562843655667064923",
+        "type": "GuildPublicThread",
+        "categoryId": "1483535932954251462",
+        "category": "pr-36002",
+        "name": "Pregunta 1",
+        "topic": null
+    },
+    "dateRange": {
+        "after": null,
+        "before": null
+    },
+    "exportedAt": "2026-11-09T01:02:09.6279716+01:00",
+    "messages": [
+        {
+            "id": "1562843655667064923",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:02:43.742+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "Pregunta 1 -> Antes de #35531, ¿qué guardaba cada entrada del txindex como clave y como valor? ¿Y después? ¿Por qué ese cambio es lo que permite tener un txindex en un nodo podado?",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562843950098808954",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:03:53.94+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "empezamos!",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562844016427405393",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:04:09.754+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "Antes: full 32-byte txid -> posición del bloque en disco + offset de la transacción\nDespués: hash_prefix (los primeros 5 bytes del resultado del siphash) + block number + tx offset -> nada. Esto ahorra espacio en disco.\n\nEste PR permite txindex en un nodo podado porque ahora la entrada, en vez de apuntar a una posición en el disco, apunta al bloque. De esta manera, si el bloque no existe en disco (caso de los nodos podados), se puede descargar.",
+            "author": {
+                "id": "267078046857560065",
+                "name": "roundtripoor",
+                "discriminator": "0000",
+                "nickname": ">",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [
+                {
+                    "emoji": {
+                        "id": "",
+                        "name": "👍",
+                        "code": "thumbsup",
+                        "isAnimated": false,
+                        "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+                    },
+                    "count": 3,
+                    "users": [
+                        {
+                            "id": "484779005879386136",
+                            "name": "pxkruxe",
+                            "discriminator": "0000",
+                            "nickname": "kruxelizea",
+                            "color": null,
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/484779005879386136/6c8a859c3563cc0d10d4cbc80626987d.png?size=512"
+                        },
+                        {
+                            "id": "688930139534655556",
+                            "name": "nacho_porte",
+                            "discriminator": "0000",
+                            "nickname": "nacho_porte",
+                            "color": null,
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/688930139534655556/95ea0c95d4d733d948a60724df2be008.png?size=512"
+                        },
+                        {
+                            "id": "1471624026194706523",
+                            "name": "nebula21m_32989",
+                            "discriminator": "0000",
+                            "nickname": "nebula",
+                            "color": null,
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/1471624026194706523/5e144945c0a44694fb75d92c279dcda1.png?size=512"
+                        }
+                    ]
+                }
+            ],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562844162779254876",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:04:44.647+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "exactamnete!!!",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562844257386107052",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:05:07.203+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "esta era sencilla, alguien quiere añadir algo?",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562844342823944293",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:05:27.573+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "De momento todo claro 🙂",
+            "author": {
+                "id": "433663137951252480",
+                "name": "kepler_03j09",
+                "discriminator": "0000",
+                "nickname": "Kepler",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/433663137951252480/6f250c0f4b0747c22b2264e7eb94a97e.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": [
+                {
+                    "id": "",
+                    "name": "🙂",
+                    "code": "slight_smile",
+                    "isAnimated": false,
+                    "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f642.svg"
+                }
+            ]
+        },
+        {
+            "id": "1562844529621598351",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:06:12.109+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "El problema anterior era que, si un bloque se había podado, no podíamos recuperar su hash y, por lo tanto, no podíamos volver a descargarlo.",
+            "author": {
+                "id": "763471941452431451",
+                "name": "andrewtoth.",
+                "discriminator": "0000",
+                "nickname": "andrewtoth",
+                "color": null,
+                "isBot": false,
+                "roles": [],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/763471941452431451/4abd8c428fd80817cf2f88438586ce70.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [
+                {
+                    "emoji": {
+                        "id": "",
+                        "name": "❤️",
+                        "code": "heart",
+                        "isAnimated": false,
+                        "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2764.svg"
+                    },
+                    "count": 2,
+                    "users": [
+                        {
+                            "id": "267078046857560065",
+                            "name": "roundtripoor",
+                            "discriminator": "0000",
+                            "nickname": ">",
+                            "color": "#992D22",
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/267078046857560065/b7cdeba78d812e377a3a87399fe32b33.png?size=512"
+                        },
+                        {
+                            "id": "342759576338300928",
+                            "name": "siegfried27",
+                            "discriminator": "0000",
+                            "nickname": "arejula27",
+                            "color": "#992D22",
+                            "isBot": false,
+                            "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+                        }
+                    ]
+                }
+            ],
+            "mentions": [],
+            "inlineEmojis": []
+        },
+        {
+            "id": "1562844797377581143",
+            "type": "Default",
+            "timestamp": "2026-10-22T17:07:15.947+02:00",
+            "timestampEdited": null,
+            "callEndedTimestamp": null,
+            "isPinned": false,
+            "content": "exatamente, esto luego lo veremos mas  a fondo en la tres ;p",
+            "author": {
+                "id": "342759576338300928",
+                "name": "siegfried27",
+                "discriminator": "0000",
+                "nickname": "arejula27",
+                "color": "#992D22",
+                "isBot": false,
+                "roles": [
+                    {
+                        "id": "1483542958153138197",
+                        "name": "PR Proposer",
+                        "color": "#992D22",
+                        "position": 1
+                    }
+                ],
+                "avatarUrl": "https://cdn.discordapp.com/avatars/342759576338300928/607f31f990f04c85f4b0500aa08cff4d.png?size=512"
+            },
+            "attachments": [],
+            "embeds": [],
+            "stickers": [],
+            "reactions": [],
+            "mentions": [],
+            "inlineEmojis": []
+        }
+    ],
+    "messageCount": 8
+}
