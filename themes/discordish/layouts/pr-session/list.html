@@ -9,10 +9,14 @@
 <ol class="thread-list">
   {{ range .Params.threads }}
     <li>
-      <a href="{{ printf "%s/%s/" $base .slug }}">
-        <div class="thread-list-label">{{ if eq .role "intro" }}Introducción{{ else }}Pregunta {{ .number }}{{ end }}</div>
-        {{ with .questionText }}<div class="thread-list-question">{{ markdownify . }}</div>{{ end }}
-      </a>
+      {{/* Enlace de fondo que cubre toda la tarjeta (en vez de envolverla),
+           porque questionText puede traer enlaces en markdown (p.ej. a otra
+           PR referenciada) y anidar <a> dentro de <a> es HTML inválido: el
+           navegador corta el enlace exterior justo ahí y la tarjeta se
+           parte visualmente en trozos. */}}
+      <a class="thread-list-link" href="{{ printf "%s/%s/" $base .slug }}" aria-label="{{ if eq .role "intro" }}Introducción{{ else }}Pregunta {{ .number }}{{ end }}"></a>
+      <div class="thread-list-label">{{ if eq .role "intro" }}Introducción{{ else }}Pregunta {{ .number }}{{ end }}</div>
+      {{ with .questionText }}<div class="thread-list-question">{{ markdownify . }}</div>{{ end }}
     </li>
   {{ end }}
 </ol>
