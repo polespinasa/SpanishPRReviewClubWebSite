@@ -7,7 +7,7 @@
 #
 # Ver "Anunciar la próxima sesión" y "Cerrar una sesión y archivarla" en el README.
 
-enabled: true
+enabled: false
 
 title: "Nuevo PR Review Club!!"
 date_display: ""        # p. ej. "Jueves 30 de Julio a las 7pm CEST"
