@@ -482,22 +482,35 @@ a.next-session-title:hover { color: var(--accent) !important; }
   margin-top: 1.25rem;
 }
 
-.thread-list a {
-  display: block;
+.thread-list li {
+  position: relative;
   padding: 0.55rem 0.85rem;
   border-radius: var(--radius-sm);
   background: var(--bg-raised);
   border: 1px solid var(--hairline);
-  color: var(--text) !important;
-  text-decoration: none !important;
   transition: border-color 120ms ease;
 }
 
-.thread-list a:hover {
+.thread-list li:hover {
   border-color: var(--hairline-strong);
 }
 
+/* Cubre toda la tarjeta para que se pueda pulsar en cualquier punto, sin
+   envolver questionText (que puede traer sus propios enlaces en markdown). */
+.thread-list-link {
+  position: absolute;
+  inset: 0;
+}
+
+/* Por encima del enlace de fondo, para que un enlace dentro de
+   questionText (p.ej. a otra PR referenciada) siga siendo clicable. */
+.thread-list-question a {
+  position: relative;
+  z-index: 1;
+}
+
 .thread-list-label {
+  color: var(--text);
   font-weight: 600;
 }
 
