@@ -21,7 +21,17 @@ pr:
   name: "#35558 — p2p: Prefill compact blocks"              # p. ej. "#35501 — wallet: store all witness variants of a transaction"
   url: "https://github.com/bitcoin/bitcoin/pull/35558"
 
-questions: []           # lista de preguntas separadas por coma
+questions:
+  - "¿Qué son los compact blocks y en qué se diferencian de la forma tradicional de retransmitir bloques? ¿Puedes explicar los mensajes que define el [BIP 152](https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki)?"
+  - "Revisa [este post de delvingbitcoin](https://delvingbitcoin.org/t/stats-on-compact-block-reconstructions/1052). ¿Qué observaron algunos usuarios?"
+  - "¿Qué solución a ese problema propone el autor?"
+  - "Los primeros 4 commits pertenecen al sub-PR [#36787](https://github.com/bitcoin/bitcoin/pull/36787), dicho PR tiene como fin almacenar en caché el mensaje P2P `CMPCTBLOCK` ya preparado para relay. ¿Puedes explicar cómo/cuándo ocurre dicha operación? ¿En qué se diferencia de la implementación actual?"
+  - "En la descripción del PR base, el autor menciona algo llamado \"TCP window\". Explica qué es y su relevancia en el PR."
+  - "El PR introduce la clase `TCPInfo`, ¿qué es y cómo se usan sus instancias?"
+  - "En el commit `60aa34eb0b` \"p2p: keep track of cmpctblock prefill candidates\", que introduce el tracking de las transacciones candidatas a ser \"pre-llenadas\", se añade un nuevo miembro al struct `m_most_recent_pow_block`, `std::pair<uint256, std::set<uint32_t>> prefill_candidates`, que es un par donde el primer elemento es un blockhash, pero en el mismo struct hay otro miembro existente que también es un blockhash. ¿Por qué no simplemente confiar en el hash que ya existe y convertir `prefill_candidates` en un set plano?"
+  - "En el body del commit `60aa34eb0b` \"p2p: keep track of cmpctblock prefill candidates\", se mencionan 3 casos en los que una tx pasa a ser un candidato a prefill. ¿Puedes explicar cómo los cambios de este commit hacen que esto sea posible?"
+  - "En el commit `aee9cc3288` \"p2p: prefill our compact blocks with candidates\", se agrega un segundo `std::shared_future<CSerializedNetMsg>`, `prefill_cb_msg_fut`, que almacena en caché otro mensaje `CMPCTBLOCK` serializado. ¿Para qué sirve este segundo mensaje? ¿Cuál es la diferencia con el preexistente `cmpctblock_msg_fut`?"
+  - "¿Has compilado/testado el PR? ¿Cómo te organizaste para revisarlo? ¿Hay algo que te pareció importante o que quieras revisar en grupo?"
 questions_note: "Las preguntas se publicarán unos días antes de la sesión."
 
 # Solo se usan una vez archivada la sesión: alimentan los filtros de la landing.
